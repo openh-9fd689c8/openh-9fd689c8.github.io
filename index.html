@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51视频学院 - 剪辑实战课程与创作指南</title>
+<meta name="description" content="51视频学院汇聚短视频剪辑实战课、调色与音频处理专题、拍摄运镜教程和创作者成长路径，适合零基础入门、进阶剪辑师与独立创作者系统学习。">
+<meta name="keywords" content="短视频剪辑课程,调色实战教程,音频处理技巧,运镜教学,创作者成长路径">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312181f'/%3E%3Cpath d='M26 20l20 12-20 12z' fill='%23ff6a3d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f141a;
+  --bg-soft:#151c24;
+  --panel:#1a232d;
+  --panel-2:#202b37;
+  --line:#2b3846;
+  --line-soft:#243040;
+  --text:#e8eef4;
+  --text-2:#a9b8c7;
+  --text-3:#7d8d9e;
+  --accent:#ff6a3d;
+  --accent-soft:rgba(255,106,61,.14);
+  --cyan:#38c3d6;
+  --cyan-soft:rgba(56,195,214,.13);
+  --gold:#f2c14e;
+  --green:#4ec98a;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 10px 28px rgba(0,0,0,.32);
+  --header-h:60px;
+  --notice-h:38px;
+  --sticky-h:98px;
+  --max:1360px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);background:var(--bg);color:var(--text);
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+section[id],div[id]{scroll-margin-top:calc(var(--sticky-h) + 14px)}
+
+/* ---------- 吸顶公告条 ---------- */
+.notice-bar{
+  position:sticky;top:0;z-index:60;height:var(--notice-h);
+  background:linear-gradient(90deg,#2a1a12,#3a2116 45%,#1c2530);
+  border-bottom:1px solid #4a2f22;
+  display:flex;align-items:center;
+}
+.notice-inner{
+  max-width:var(--max);margin:0 auto;width:100%;padding:0 20px;
+  display:flex;align-items:center;gap:12px;font-size:12.5px;color:#ffd9c6;
+  overflow:hidden;white-space:nowrap;
+}
+.notice-tag{
+  flex:none;background:var(--accent);color:#fff;font-weight:700;
+  font-size:11px;padding:2px 8px;border-radius:20px;letter-spacing:.5px;
+}
+.notice-text{overflow:hidden;text-overflow:ellipsis}
+.notice-text b{color:#fff;font-weight:600}
+.notice-link{margin-left:auto;flex:none;color:var(--gold);font-weight:600}
+
+/* ---------- 吸顶页头 ---------- */
+.site-header{
+  position:sticky;top:var(--notice-h);z-index:55;height:var(--header-h);
+  background:rgba(15,20,26,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-soft);
+}
+.header-inner{
+  max-width:var(--max);margin:0 auto;height:100%;padding:0 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:34px;height:34px;flex:none}
+.brand-name{font-size:18px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.brand-name span{color:var(--accent)}
+.main-nav{display:flex;align-items:center;gap:4px;flex:1;overflow:hidden}
+.main-nav a{
+  padding:6px 10px;border-radius:8px;font-size:13.5px;color:var(--text-2);
+  white-space:nowrap;transition:.18s;
+}
+.main-nav a:hover{color:#fff;background:var(--panel-2)}
+.header-actions{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:184px;background:var(--panel);border:1px solid var(--line);
+  border-radius:20px;padding:6px 32px 6px 13px;color:var(--text);
+  font-size:12.5px;font-family:inherit;transition:.2s;
+}
+.search-box input::placeholder{color:var(--text-3)}
+.search-box input:focus{width:216px;border-color:var(--cyan);outline:none}
+.search-box button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  background:none;border:0;color:var(--text-3);padding:4px;display:flex;
+}
+.search-box button:hover{color:var(--cyan)}
+.btn-ghost{
+  border:1px solid var(--line);background:transparent;color:var(--text-2);
+  padding:6px 14px;border-radius:20px;font-size:12.5px;transition:.2s;
+}
+.btn-ghost:hover{border-color:var(--accent);color:#fff}
+.btn-solid{
+  border:0;background:var(--accent);color:#fff;font-weight:600;
+  padding:7px 16px;border-radius:20px;font-size:13px;transition:.2s;
+}
+.btn-solid:hover{filter:brightness(1.08)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:5px 9px}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(760px 340px at 82% -8%, rgba(56,195,214,.16), transparent 62%),
+    radial-gradient(620px 300px at 8% 4%, rgba(255,106,61,.15), transparent 60%),
+    linear-gradient(180deg,#121a22,#0f141a);
+  border-bottom:1px solid var(--line-soft);
+}
+.hero-inner{
+  max-width:var(--max);margin:0 auto;padding:52px 20px 46px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;
+  color:var(--cyan);background:var(--cyan-soft);border:1px solid rgba(56,195,214,.28);
+  padding:4px 12px;border-radius:20px;margin-bottom:18px;letter-spacing:.4px;
+}
+.hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--cyan);display:block}
+.hero h1{
+  font-size:clamp(30px,4.2vw,46px);letter-spacing:1px;margin-bottom:16px;
+  background:linear-gradient(96deg,#fff 30%,#ffc9b4 72%,#ff8a5c);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-desc{color:var(--text-2);font-size:15.5px;max-width:560px;margin-bottom:24px}
+.hero-desc b{color:var(--text);font-weight:600}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap}
+.hero-stat strong{display:block;font-size:20px;color:var(--gold);font-weight:800;line-height:1.2}
+.hero-stat span{font-size:12px;color:var(--text-3)}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-visual svg{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 18px 32px rgba(0,0,0,.42))}
+
+/* ---------- 主内容布局 ---------- */
+.layout{
+  max-width:var(--max);margin:0 auto;padding:34px 20px 20px;
+  display:grid;grid-template-columns:224px minmax(0,1fr) 268px;gap:26px;
+  align-items:start;
+}
+.channel-rail{position:sticky;top:calc(var(--sticky-h) + 14px)}
+.rail-card{
+  background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:14px 12px;
+}
+.rail-title{
+  font-size:12px;letter-spacing:1.6px;color:var(--text-3);
+  text-transform:uppercase;padding:0 6px 10px;border-bottom:1px solid var(--line-soft);margin-bottom:8px;
+}
+.channel-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:7px 8px;border-radius:8px;font-size:13.5px;color:var(--text-2);transition:.16s;
+}
+.channel-list a:hover{background:var(--panel-2);color:#fff}
+.channel-list a em{font-style:normal;font-size:11px;color:var(--text-3)}
+.channel-list a.active{background:var(--accent-soft);color:#ffbda6}
+.channel-list a.active em{color:var(--accent)}
+.rail-note{
+  margin-top:12px;background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:14px 12px;font-size:12.5px;color:var(--text-3);
+}
+.rail-note strong{display:block;color:var(--text);font-size:13px;margin-bottom:6px}
+.rail-note .go{color:var(--cyan);font-weight:600}
+
+.main-col{min-width:0}
+.side-col{position:sticky;top:calc(var(--sticky-h) + 14px);display:flex;flex-direction:column;gap:18px}
+
+/* ---------- 通用板块 ---------- */
+.block{margin-bottom:34px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
+.block-head h2{font-size:20px;letter-spacing:.3px}
+.block-head h2::before{
+  content:"";display:inline-block;width:4px;height:17px;background:var(--accent);
+  border-radius:2px;margin-right:9px;vertical-align:-2px;
+}
+.block-head .sub{font-size:12.5px;color:var(--text-3)}
+.block-head .more{font-size:12.5px;color:var(--cyan);white-space:nowrap}
+.block-head .more:hover{text-decoration:underline}
+
+/* 概览 */
+.overview{
+  background:linear-gradient(150deg,var(--panel),var(--bg-soft));
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:22px 24px;font-size:14.5px;color:var(--text-2);
+}
+.overview p{margin-bottom:11px}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--text);font-weight:600}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.2s;
+}
+.card:hover{border-color:#3b4c5e;transform:translateY(-2px);box-shadow:var(--shadow)}
+.card-thumb{position:relative;aspect-ratio:4/3;background:#101820}
+.card-thumb img{width:100%;height:100%;object-fit:cover}
+.card-badge{
+  position:absolute;left:9px;top:9px;background:rgba(10,14,19,.82);
+  color:var(--gold);font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:15px;margin-bottom:7px}
+.card-body h3 a:hover{color:var(--cyan)}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tag{
+  font-size:11px;padding:1px 7px;border-radius:4px;
+  background:var(--panel-2);color:var(--text-2);border:1px solid var(--line-soft);
+}
+.tag.hot{background:var(--accent-soft);color:#ff9b78;border-color:rgba(255,106,61,.3)}
+.tag.cool{background:var(--cyan-soft);color:#7fe0ec;border-color:rgba(56,195,214,.3)}
+.card-body p{font-size:12.8px;color:var(--text-3);line-height:1.65;margin-bottom:10px;flex:1}
+.card-meta{display:flex;align-items:center;justify-content:space-between;font-size:11.5px;color:var(--text-3);border-top:1px solid var(--line-soft);padding-top:8px}
+.card-meta .score{color:var(--gold);font-weight:700}
+
+/* 更新列表 */
+.update-list{background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
+.update-item{
+  display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:14px;align-items:center;
+  padding:12px 16px;border-bottom:1px solid var(--line-soft);transition:.16s;
+}
+.update-item:last-child{border-bottom:0}
+.update-item:hover{background:var(--panel-2)}
+.update-time{font-size:11.5px;color:var(--text-3);line-height:1.4}
+.update-time b{display:block;color:var(--cyan);font-size:12.5px;font-weight:600}
+.update-item h3{font-size:14px;margin-bottom:2px}
+.update-item h3 span{font-size:11px;font-weight:500;color:var(--text-3);margin-left:6px}
+.update-item p{font-size:12.5px;color:var(--text-3);margin:0}
+.update-badge{font-size:11px;padding:2px 8px;border-radius:20px;background:var(--cyan-soft);color:#7fe0ec;white-space:nowrap}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat-item{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:14px 14px 13px;transition:.18s;display:block;
+}
+.cat-item:hover{border-color:var(--accent);background:var(--panel-2)}
+.cat-item strong{display:block;font-size:14px;margin-bottom:4px}
+.cat-item span{font-size:11.5px;color:var(--text-3);line-height:1.5}
+.cat-item em{font-style:normal;display:block;margin-top:8px;font-size:11px;color:var(--accent)}
+
+/* 深度解析 */
+.article{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:26px 28px;font-size:14.5px;color:var(--text-2);
+}
+.article h2{font-size:21px;color:var(--text);margin-bottom:8px}
+.article .lead{font-size:13px;color:var(--text-3);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line-soft)}
+.article h3{font-size:16px;color:var(--text);margin:22px 0 10px;padding-left:11px;border-left:3px solid var(--cyan)}
+.article p{margin-bottom:11px}
+.article strong{color:#fff;font-weight:600}
+.article ul{margin:0 0 14px;padding-left:0}
+.article ul li{position:relative;padding-left:18px;margin-bottom:7px;font-size:14px}
+.article ul li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+.article .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 16px}
+.compare-box{background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:13px 15px}
+.compare-box h4{font-size:13.5px;color:var(--cyan);margin-bottom:6px}
+.compare-box p{font-size:13px;margin:0;color:var(--text-3)}
+
+/* 路径步骤 */
+.steps{counter-reset:st;display:grid;gap:12px}
+.step{
+  display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:15px 17px;
+}
+.step::before{
+  counter-increment:st;content:counter(st,decimal-leading-zero);
+  font-size:19px;font-weight:800;color:var(--accent);line-height:1.2;
+}
+.step h3{font-size:14.5px;margin-bottom:4px}
+.step p{font-size:13px;color:var(--text-3);margin:0}
+
+/* FAQ */
+.faq{display:grid;gap:9px}
+.faq details{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  overflow:hidden;
+}
+.faq details[open]{border-color:rgba(56,195,214,.4)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:13px 44px 13px 16px;position:relative;
+  font-size:14px;font-weight:600;color:var(--text);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  color:var(--cyan);font-size:18px;font-weight:400;line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 16px 14px;font-size:13.2px;color:var(--text-3);line-height:1.75}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.comment{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:12px 14px;
+}
+.comment-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{
+  width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#0f141a;background:var(--cyan);
+}
+.comment-head strong{font-size:12.5px;color:var(--text)}
+.comment-head time{margin-left:auto;font-size:11px;color:var(--text-3)}
+.comment p{font-size:12.8px;color:var(--text-3);margin:0;line-height:1.65}
+.comment p b{color:#ffbda6;font-weight:600}
+
+/* 资讯 */
+.news-list{display:grid;gap:12px}
+.news-item{
+  display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:12px;transition:.18s;
+}
+.news-item:hover{border-color:#3b4c5e}
+.news-item img{width:132px;height:88px;object-fit:cover;border-radius:7px}
+.news-item h3{font-size:14.5px;margin-bottom:5px}
+.news-item p{font-size:12.8px;color:var(--text-3);margin:0 0 6px}
+.news-meta{font-size:11.5px;color:var(--text-3);display:flex;gap:12px}
+.news-meta span:first-child{color:var(--cyan)}
+
+/* 相关推荐标签索引 */
+.reco-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.reco{
+  display:flex;align-items:center;gap:10px;padding:11px 13px;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  font-size:13px;transition:.16s;
+}
+.reco:hover{border-color:var(--cyan);color:#fff}
+.reco .num{font-size:11px;color:var(--accent);font-weight:700;flex:none}
+.reco span{color:var(--text-3);font-size:11.5px;margin-left:auto;flex:none}
+
+/* 榜单 */
+.rank{background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
+.rank-item{
+  display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:11px 15px;border-bottom:1px solid var(--line-soft);
+}
+.rank-item:last-child{border-bottom:0}
+.rank-no{font-size:15px;font-weight:800;color:var(--text-3);font-style:italic}
+.rank-item:nth-child(1) .rank-no{color:var(--accent)}
+.rank-item:nth-child(2) .rank-no{color:var(--gold)}
+.rank-item:nth-child(3) .rank-no{color:var(--cyan)}
+.rank-item h3{font-size:13.5px;margin-bottom:1px}
+.rank-item p{font-size:11.5px;color:var(--text-3);margin:0}
+.rank-score{font-size:12px;color:var(--gold);font-weight:700}
+
+/* 侧栏 */
+.side-card{background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);padding:16px}
+.side-card h3{font-size:14px;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--line-soft)}
+.side-card h3 span{float:right;font-size:11px;color:var(--text-3);font-weight:400}
+.hot-mini{display:grid;gap:9px}
+.hot-mini a{display:grid;grid-template-columns:20px minmax(0,1fr);gap:9px;font-size:12.8px;color:var(--text-2);line-height:1.5}
+.hot-mini a:hover{color:var(--cyan)}
+.hot-mini i{font-style:normal;font-size:11.5px;font-weight:700;color:var(--text-3)}
+.hot-mini a:nth-child(-n+3) i{color:var(--accent)}
+.side-tags{display:flex;flex-wrap:wrap;gap:7px}
+.side-tags a{
+  font-size:12px;padding:4px 10px;border-radius:20px;background:var(--panel-2);
+  color:var(--text-2);border:1px solid var(--line-soft);transition:.16s;
+}
+.side-tags a:hover{color:#fff;border-color:var(--cyan)}
+.timeline{display:grid;gap:0}
+.tl-item{position:relative;padding:0 0 14px 18px;border-left:1px solid var(--line)}
+.tl-item:last-child{padding-bottom:0;border-left-color:transparent}
+.tl-item::before{
+  content:"";position:absolute;left:-4px;top:5px;width:7px;height:7px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 3px rgba(255,106,61,.16);
+}
+.tl-item time{font-size:11px;color:var(--cyan)}
+.tl-item p{font-size:12.5px;color:var(--text-2);margin:2px 0 0}
+
+/* 搜索无结果 */
+.no-result{
+  display:none;padding:26px;text-align:center;color:var(--text-3);font-size:13.5px;
+  background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius);
+}
+
+/* 页尾 */
+.site-footer{
+  margin-top:20px;border-top:1px solid var(--line-soft);
+  background:linear-gradient(180deg,#111820,#0c1116);
+}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:38px 20px 26px}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:28px}
+.footer-brand p{font-size:12.8px;color:var(--text-3);margin:10px 0 0;max-width:320px}
+.footer-col h4{font-size:13px;color:var(--text);margin-bottom:10px;letter-spacing:.5px}
+.footer-col a{display:block;font-size:12.5px;color:var(--text-3);padding:3px 0;transition:.16s}
+.footer-col a:hover{color:var(--cyan)}
+.footer-bottom{
+  border-top:1px solid var(--line-soft);padding-top:16px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:11.5px;color:var(--text-3);
+}
+.footer-bottom .demo{color:#5f6f80}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1200px){
+  .layout{grid-template-columns:200px minmax(0,1fr);}
+  .side-col{position:static;grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:30px;padding-top:40px}
+  .hero-visual{order:-1;justify-content:flex-start}
+  .hero-visual svg{max-width:320px}
+  .layout{grid-template-columns:minmax(0,1fr);}
+  .channel-rail{position:static;order:2}
+  .main-col{order:1}
+  .side-col{order:3;grid-template-columns:repeat(2,1fr)}
+  .channel-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+  .rail-title{padding-bottom:8px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  :root{--sticky-h:96px}
+  .notice-inner{font-size:11.5px;padding:0 14px;gap:8px}
+  .notice-link{display:none}
+  .header-inner{padding:0 14px;gap:10px}
+  .main-nav{display:none}
+  .nav-toggle{display:block}
+  .main-nav.open{
+    display:flex;position:absolute;left:0;right:0;top:var(--header-h);
+    flex-direction:column;align-items:stretch;background:#131b23;
+    border-bottom:1px solid var(--line);padding:10px 14px;gap:2px;z-index:50;
+  }
+  .main-nav.open a{padding:9px 10px}
+  .search-box input{width:132px}
+  .search-box input:focus{width:150px}
+  .btn-ghost{display:none}
+  .layout{padding:24px 14px 14px}
+  .hero-inner{padding:30px 14px 30px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .article{padding:19px 17px}
+  .article .compare{grid-template-columns:1fr}
+  .comments{grid-template-columns:1fr}
+  .reco-grid{grid-template-columns:1fr}
+  .side-col{grid-template-columns:1fr}
+  .channel-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .news-item{grid-template-columns:98px minmax(0,1fr);gap:11px}
+  .news-item img{width:98px;height:74px}
+  .update-item{grid-template-columns:minmax(0,1fr) auto;gap:8px}
+  .update-time{grid-column:1/-1;display:flex;gap:8px;align-items:baseline}
+  .update-time b{display:inline}
+  .footer-top{grid-template-columns:1fr 1fr;gap:20px}
+  .hero-stats{gap:18px}
+}
+@media (max-width:400px){
+  .cat-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice-bar" role="region" aria-label="更新公告">
+  <div class="notice-inner">
+    <span class="notice-tag">新课</span>
+    <span class="notice-text">本周新增 <b>12 节实战课</b>：达芬奇 19 节点调色、口播混音三件套、竖屏运镜 8 种走位已上线</span>
+    <a class="notice-link" href="/#zuixin">查看更新 →</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/#top" aria-label="51视频学院首页">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#1c2733"/>
+        <rect x="6" y="11" width="18" height="18" rx="4" fill="none" stroke="#38c3d6" stroke-width="2"/>
+        <path d="M25 20l9-6v12z" fill="#ff6a3d"/>
+      </svg>
+      <span class="brand-name">51视频学院</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#gaishu">学院概览</a>
+      <a href="/#jingxuan">精选课程</a>
+      <a href="/#zuixin">最新更新</a>
+      <a href="/#fenlei">分类入口</a>
+      <a href="/#jiedu">深度解析</a>
+      <a href="/#zhinan">学习路径</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#pinglun">学员评论</a>
+    </nav>
+    <div class="header-actions">
+      <form class="search-box" role="search" id="searchForm">
+        <input type="search" id="searchInput" placeholder="搜课程 / 技巧" aria-label="搜索课程">
+        <button type="submit" aria-label="搜索">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+        </button>
+      </form>
+      <button class="btn-ghost" type="button" id="favBtn">收藏夹</button>
+      <a class="btn-solid" href="/#zhinan">开始学习</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 首屏 -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-eyebrow"><i></i>剪辑 · 调色 · 音频 · 运镜</span>
+      <h1 id="heroTitle">51视频学院</h1>
+      <p class="hero-desc">汇聚短视频剪辑、影视调色、音频处理与拍摄运镜的系统实战课。从 <b>剪映基础时间线</b> 到 <b>达芬奇节点调色</b>，从口播降噪到竖屏运镜走位，按技能阶段排列，每节课都对应一个可交付的成片。</p>
+      <div class="hero-cta">
+        <a class="btn-solid" href="/#jingxuan">浏览精选课程</a>
+        <a class="btn-ghost" href="/#zhinan">零基础学习路径</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>286</strong><span>节实战课程</span></div>
+        <div class="hero-stat"><strong>9</strong><span>个技能方向</span></div>
+        <div class="hero-stat"><strong>11-08</strong><span>本周更新日</span></div>
+        <div class="hero-stat"><strong>4.8</strong><span>课程平均评分</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#38c3d6" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#1f6e7c" stop-opacity=".25"/>
+          </linearGradient>
+          <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff6a3d" stop-opacity=".95"/>
+            <stop offset="1" stop-color="#a3381b" stop-opacity=".35"/>
+          </linearGradient>
+        </defs>
+        <rect x="8" y="8" width="404" height="304" rx="18" fill="#141d26" stroke="#2b3846"/>
+        <!-- 时间线 -->
+        <rect x="28" y="220" width="364" height="66" rx="10" fill="#101922" stroke="#26333f"/>
+        <rect x="40" y="232" width="96" height="18" rx="4" fill="url(#gA)"/>
+        <rect x="142" y="232" width="70" height="18" rx="4" fill="url(#gB)"/>
+        <rect x="218" y="232" width="120" height="18" rx="4" fill="#22303d"/>
+        <rect x="40" y="256" width="150" height="10" rx="3" fill="#38c3d6" opacity=".5"/>
+        <rect x="196" y="256" width="94" height="10" rx="3" fill="#ff6a3d" opacity=".5"/>
+        <rect x="296" y="256" width="78" height="10" rx="3" fill="#f2c14e" opacity=".4"/>
+        <line x1="176" y1="222" x2="176" y2="284" stroke="#ff6a3d" stroke-width="2"/>
+        <circle cx="176" cy="222" r="4" fill="#ff6a3d"/>
+        <!-- 预览窗 -->
+        <rect x="28" y="34" width="234" height="158" rx="12" fill="#0d151d" stroke="#2b3846"/>
+        <path d="M118 90l42 24-42 24z" fill="#ff6a3d"/>
+        <rect x="46" y="160" width="80" height="8" rx="4" fill="#2b3846"/>
+        <rect x="134" y="160" width="52" height="8" rx="4" fill="#2b3846"/>
+        <!-- 参数面板 -->
+        <rect x="278" y="34" width="114" height="158" rx="12" fill="#101922" stroke="#26333f"/>
+        <circle cx="335" cy="76" r="26" fill="none" stroke="#26333f" stroke-width="6"/>
+        <path d="M335 50a26 26 0 0 1 22 39" fill="none" stroke="#38c3d6" stroke-width="6" stroke-linecap="round"/>
+        <path d="M335 76l14-10" stroke="#ff6a3d" stroke-width="3" stroke-linecap="round"/>
+        <rect x="294" y="120" width="82" height="8" rx="4" fill="#26333f"/>
+        <rect x="294" y="136" width="60" height="8" rx="4" fill="#26333f"/>
+        <rect x="294" y="152" width="72" height="8" rx="4" fill="#26333f"/>
+        <rect x="294" y="168" width="44" height="8" rx="4" fill="#38c3d6" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="layout">
+
+  <!-- 左频道索引 -->
+  <aside class="channel-rail" aria-label="频道索引">
+    <div class="rail-card">
+      <div class="rail-title">技能频道</div>
+      <nav class="channel-list" aria-label="技能频道列表">
+        <a href="/#fenlei" class="active">剪辑基础 <em>48</em></a>
+        <a href="/#fenlei">调色实战 <em>36</em></a>
+        <a href="/#fenlei">音频处理 <em>31</em></a>
+        <a href="/#fenlei">拍摄运镜 <em>42</em></a>
+        <a href="/#fenlei">口播与访谈 <em>27</em></a>
+        <a href="/#fenlei">Vlog 叙事 <em>34</em></a>
+        <a href="/#fenlei">字幕与包装 <em>29</em></a>
+        <a href="/#fenlei">商单交付 <em>22</em></a>
+        <a href="/#fenlei">AI 辅助创作 <em>17</em></a>
+      </nav>
+    </div>
+    <div class="rail-note">
+      <strong>本周学习方向</strong>
+      竖屏口播的降噪与混音顺序，搭配达芬奇 Free 版即可完成。
+      <a class="go" href="/#zuixin">看更新 →</a>
+    </div>
+  </aside>
+
+  <!-- 主内容 -->
+  <div class="main-col">
+
+    <!-- 1 主题领域概览 -->
+    <section class="block" id="gaishu" aria-labelledby="gaishuTitle">
+      <div class="block-head">
+        <h2 id="gaishuTitle">视频剪辑学习领域概览</h2>
+        <span class="sub">技能地图 · 2026 年 11 月</span>
+      </div>
+      <div class="overview">
+        <p>视频剪辑学习通常沿三条线展开：<strong>软件操作线</strong>、<strong>视听语言线</strong>和<strong>交付流程线</strong>。软件操作线解决工具问题，剪映、Premiere、Final Cut 和达芬奇的界面逻辑差异明显，但时间线、轨道、关键帧这些基础概念相通。视听语言线解决判断问题，同一段素材在不同节奏、不同色温下传达的情绪完全不同，这部分靠大量看片和拆解积累。</p>
+        <p>当前较受关注的方向集中在<strong>竖屏口播</strong>与<strong>商单交付</strong>两块。竖屏口播的关键不在于机位多高级，而在收音质量、字幕断句和背景虚化层次；商单交付则更看重成片规范，交付尺寸、时长控制、BGM 授权清单都会影响结算。调色方面，达芬奇 19 的节点式流程已经进入入门课程，节点结构比调色参数更值得先学。</p>
+        <p>内容形态上，<strong>Vlog 叙事</strong>与<strong>访谈纪录片</strong>对剪辑节奏的要求差异最大。Vlog 允许跳切和粗颗粒，用节奏带情绪；访谈片则要求呼吸感，切点必须避开语义停顿。理解这种类型差异，比单纯背快捷键更能提升成片质量。下面按精选课程、更新动态、分类入口与深度解析逐层展开。</p>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="jingxuan" aria-labelledby="jingxuanTitle">
+      <div class="block-head">
+        <h2 id="jingxuanTitle">精选实战课程</h2>
+        <a class="more" href="/#fenlei">全部课程 →</a>
+      </div>
+      <div class="card-grid" id="courseGrid">
+
+        <article class="card" data-key="剪映 时间线 基础 字幕">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/jianying-timeline21/400/300" alt="剪映专业版时间线基础课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">零基础</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">剪映专业版时间线基础 12 讲</a></h3>
+            <div class="card-tags"><span class="tag">剪辑基础</span><span class="tag cool">剪映</span><span class="tag">字幕</span></div>
+            <p>从素材导入、轨道分离讲到关键帧动画，用一条 60 秒竖屏口播完整走一遍成片流程，重点在字幕断句与音量包络。</p>
+            <div class="card-meta"><span>32 小节 · 4.2 小时</span><span class="score">4.9</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="达芬奇 节点 调色 肤色">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/davinci-node38/400/300" alt="达芬奇节点调色实战课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">进阶</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">达芬奇 19 节点调色实战</a></h3>
+            <div class="card-tags"><span class="tag">调色实战</span><span class="tag cool">达芬奇</span><span class="tag hot">肤色保护</span></div>
+            <p>以 LOG 素材为起点，讲清串行节点与并行节点的分工，用肤色保护节点处理逆光人像，附带示波器读数判读方法。</p>
+            <div class="card-meta"><span>28 小节 · 5.6 小时</span><span class="score">4.8</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="口播 降噪 混音 音频">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/koubo-audio15/400/300" alt="口播音频降噪与混音课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">实战</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">口播音频三件套：降噪 · 均衡 · 压缩</a></h3>
+            <div class="card-tags"><span class="tag">音频处理</span><span class="tag cool">降噪</span><span class="tag">混音</span></div>
+            <p>针对室内回声与空调底噪，给出降噪强度、均衡曲线与压缩比的参考值，并对比处理前后的波形差异。</p>
+            <div class="card-meta"><span>18 小节 · 2.8 小时</span><span class="score">4.7</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="运镜 竖屏 走位 手持">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/yunjing-vertical09/400/300" alt="竖屏运镜八种走位教学封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">实操</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">竖屏运镜 8 种走位与稳定器设置</a></h3>
+            <div class="card-tags"><span class="tag">拍摄运镜</span><span class="tag cool">竖屏</span><span class="tag">稳定器</span></div>
+            <p>推、拉、摇、移在 9:16 画幅下的构图修正，讲清跟随镜头的人物占比，以及稳定器三轴力度与步行节奏的匹配。</p>
+            <div class="card-meta"><span>24 小节 · 3.4 小时</span><span class="score">4.8</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="Vlog 叙事 结构 分镜">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/vlog-story44/400/300" alt="Vlog 叙事结构拆解课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">进阶</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">Vlog 叙事结构：从流水账到三段式</a></h3>
+            <div class="card-tags"><span class="tag">Vlog 叙事</span><span class="tag">分镜</span><span class="tag cool">脚本</span></div>
+            <p>拆解 6 支百万播放 Vlog 的开场钩子与情绪拐点，给出「钩子—展开—回落」三段式的分镜表模板与素材取舍原则。</p>
+            <div class="card-meta"><span>21 小节 · 3.9 小时</span><span class="score">4.6</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="商单 交付 规范 尺寸">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/shangdan-deliver27/400/300" alt="商单交付规范与验收清单课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">交付</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">商单交付规范与验收清单</a></h3>
+            <div class="card-tags"><span class="tag">商单交付</span><span class="tag hot">验收</span><span class="tag">授权</span></div>
+            <p>梳理多平台尺寸导出、字幕安全区、BGM 授权凭证归档三件事，附一份可直接改用的交付验收清单与返修沟通话术。</p>
+            <div class="card-meta"><span>16 小节 · 2.2 小时</span><span class="score">4.7</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="字幕 包装 花字 排版">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/zimu-baozhuang33/400/300" alt="字幕与花字包装设计课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">包装</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">字幕排版与花字包装 15 讲</a></h3>
+            <div class="card-tags"><span class="tag">字幕与包装</span><span class="tag cool">排版</span><span class="tag">花字</span></div>
+            <p>从字号、行距、描边到出入场动效，讲清信息密度与可读性的平衡，重点解决竖屏底部安全区被遮挡的常见问题。</p>
+            <div class="card-meta"><span>20 小节 · 2.6 小时</span><span class="score">4.5</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="访谈 纪录片 节奏 切点">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/fangtan-docu18/400/300" alt="访谈纪录片剪辑节奏课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">进阶</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">访谈纪录片剪辑：呼吸感与切点</a></h3>
+            <div class="card-tags"><span class="tag">口播与访谈</span><span class="tag">节奏</span><span class="tag cool">切点</span></div>
+            <p>讲解语义停顿处的切点选择、B-roll 插入时机与双机位切换逻辑，用一段 8 分钟访谈演示如何保留呼吸感。</p>
+            <div class="card-meta"><span>19 小节 · 3.1 小时</span><span class="score">4.8</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-key="AI 辅助 剪辑 粗剪 字幕">
+          <div class="card-thumb">
+            <img src="https://picsum.photos/seed/ai-edit52/400/300" alt="AI 辅助粗剪与自动字幕课封面" width="400" height="300" loading="lazy">
+            <span class="card-badge">新方向</span>
+          </div>
+          <div class="card-body">
+            <h3><a href="/#jingxuan">AI 辅助粗剪与自动字幕校对</a></h3>
+            <div class="card-tags"><span class="tag">AI 辅助创作</span><span class="tag cool">粗剪</span><span class="tag">字幕校对</span></div>
+            <p>用语音转写生成初版字幕，再按语义段落重排粗剪顺序，重点讲人工校对环节如何控制错字率与断句准确度。</p>
+            <div class="card-meta"><span>14 小节 · 1.9 小时</span><span class="score">4.4</span></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="no-result" id="noResult">没有匹配到课程，试试「调色」「运镜」「降噪」等关键词。</div>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="block" id="zuixin" aria-labelledby="zuixinTitle">
+      <div class="block-head">
+        <h2 id="zuixinTitle">最新更新与直播动态</h2>
+        <span class="sub">11 月 8 日更新 12 节</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <div class="update-time"><b>今天 09:30</b>11-08</div>
+          <div><h3>达芬奇 19 节点调色 <span>第 9 节</span></h3><p>新增「并行节点混合器」章节，演示夜景人像的肤色分离处理。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>今天 08:10</b>11-08</div>
+          <div><h3>口播音频三件套 <span>第 6 节</span></h3><p>补充空调底噪的采样降噪参数，附处理前后波形对比截图。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>昨天 21:40</b>11-07</div>
+          <div><h3>竖屏运镜 8 种走位 <span>第 4 节</span></h3><p>上传稳定器跟随镜头的步行节奏演示，含 60fps 慢放版本。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>昨天 16:20</b>11-07</div>
+          <div><h3>商单交付规范 <span>附录 A</span></h3><p>更新多平台导出尺寸对照表，补充 4:5 信息流封面规格。</p></div>
+          <span class="update-badge">已修订</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 6 日 19:30</b></div>
+          <div><h3>周五直播：访谈片切点实操</h3><p>讲师现场拆解一段 8 分钟访谈，直播回放已上传课程页。</p></div>
+          <span class="update-badge">回放</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 5 日 14:00</b></div>
+          <div><h3>剪映时间线基础 <span>第 10 节</span></h3><p>新增「音量包络与关键帧联动」演示，替换原有过时界面录屏。</p></div>
+          <span class="update-badge">已修订</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 4 日 10:50</b></div>
+          <div><h3>字幕排版与花字包装 <span>第 7 节</span></h3><p>补充竖屏底部安全区实测数据，标注不同机型的遮挡高度。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 3 日 20:15</b></div>
+          <div><h3>Vlog 叙事结构 <span>第 5 节</span></h3><p>新增三段式分镜表模板下载，含钩子时长与情绪拐点标注。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 2 日 11:25</b></div>
+          <div><h3>AI 辅助粗剪 <span>第 3 节</span></h3><p>修订语音转写校对流程，补充同音错字的批量替换方法。</p></div>
+          <span class="update-badge">已修订</span>
+        </div>
+        <div class="update-item">
+          <div class="update-time"><b>11 月 1 日 09:00</b></div>
+          <div><h3>访谈纪录片剪辑 <span>第 8 节</span></h3><p>上传双机位切换逻辑演示，标注越轴风险的两个切点。</p></div>
+          <span class="update-badge">已上线</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="fenlei" aria-labelledby="fenleiTitle">
+      <div class="block-head">
+        <h2 id="fenleiTitle">按技能方向找课程</h2>
+        <span class="sub">9 个方向 · 286 节</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#jingxuan"><strong>剪辑基础</strong><span>时间线、轨道、关键帧与转场逻辑</span><em>48 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>调色实战</strong><span>节点结构、肤色保护与示波器判读</span><em>36 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>音频处理</strong><span>降噪、均衡、压缩与混音响度</span><em>31 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>拍摄运镜</strong><span>竖屏构图、稳定器走位与手持技巧</span><em>42 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>口播与访谈</strong><span>收音机位、断句字幕与呼吸感切点</span><em>27 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>Vlog 叙事</strong><span>开场钩子、三段式结构与素材取舍</span><em>34 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>字幕与包装</strong><span>排版安全区、花字动效与信息密度</span><em>29 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>商单交付</strong><span>多平台导出、授权归档与验收清单</span><em>22 节 →</em></a>
+        <a class="cat-item" href="/#jingxuan"><strong>AI 辅助创作</strong><span>语音转写、粗剪重排与字幕校对</span><em>17 节 →</em></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析正文 -->
+    <section class="block" id="jiedu" aria-labelledby="jieduTitle">
+      <div class="article">
+        <h2 id="jieduTitle">剪辑类型差异与成片判断维度</h2>
+        <p class="lead">同一套软件操作，落到不同片型上会产生完全不同的判断标准。下面按片型拆解剪辑策略，并给出评估一个条目值不值得投入时间的依据。</p>
+
+        <h3>口播类与 Vlog 类的节奏差异</h3>
+        <p>口播类视频的核心是信息密度，观众容忍的空白时间极短。实践中通常把无意义的呼吸停顿、口误重复全部剪掉，再用字幕断句把语义切成小段，形成「一句话一个画面」的节奏。<strong>竖屏口播</strong>尤其如此，画面变化少，节奏只能靠剪辑点和字幕推进。</p>
+        <p>Vlog 类正相反，它需要保留一部分「无用」的镜头——走路、等待、转头，这些镜头承担情绪铺垫功能。把 Vlog 剪成口播的密度，观众会觉得喘不过气；把口播剪成 Vlog 的松散，完播率会明显下滑。判断标准很直接：<strong>观众看这条视频是为了获取信息，还是为了陪伴感</strong>。</p>
+
+        <h3>访谈纪录片的切点选择</h3>
+        <p>访谈片的难点在于切点位置。语义停顿处切，画面会显得顿；呼吸间隙切，语义又容易被截断。常见做法是把切点放在上一句话尾音衰减之后、下一句吸气之前，同时用 B-roll 覆盖切换瞬间，避免跳帧感。</p>
+        <ul>
+          <li>短句问答：切点靠前，保留被访者的表情反应</li>
+          <li>长段叙述：切点靠后，等语义完整再切，宁可留半秒空白</li>
+          <li>双机位：优先切到说话人，但每 40—60 秒插入一次听者反应镜头</li>
+          <li>越轴风险：两人对坐时，切点不要跨越中轴线，否则观众会短暂迷失方位</li>
+        </ul>
+
+        <h3>调色不是滤镜：节点结构的先后顺序</h3>
+        <p>调色的常见误区是先调风格再修曝光，结果肤色被压得发灰。合理顺序是先做<strong>一级校正</strong>（曝光、白平衡、对比），再做<strong>二级风格化</strong>（色相偏移、分离色调），最后用肤色保护节点把人物面部拉回自然区间。达芬奇的串行节点天然契合这个顺序，并行节点则适合处理同一素材的多个输出目标。</p>
+        <div class="compare">
+          <div class="compare-box">
+            <h4>串行节点</h4>
+            <p>按顺序依次作用，前一节点结果进入后一节点，适合校正—风格化—输出的线性流程。</p>
+          </div>
+          <div class="compare-box">
+            <h4>并行节点</h4>
+            <p>多个分支同时处理同一输入再混合，适合同时输出不同版本或做局部遮罩分离。</p>
+          </div>
+        </div>
+
+        <h3>音频处理的实际顺序</h3>
+        <p>音频三件套的顺序会直接影响结果。正确顺序是<strong>降噪 → 均衡 → 压缩</strong>：先去掉底噪，避免均衡阶段把噪声频段一起放大；再修人声频段，削减 200—400Hz 的浑浊感；最后压缩动态，让音量稳定在可听区间。顺序颠倒会出现「越压越吵」的情况。</p>
+        <p>响度目标上，短视频平台通常参考 -14 LUFS 左右，访谈类可以略低到 -16 LUFS，给环境声留空间。不要只盯着峰值电平，瞬时响度才是观众实际感受到的音量。</p>
+
+        <h3>判断一个课程条目值不值得投入时间</h3>
+        <p>看三个信号：<strong>是否有完整成片演示</strong>、<strong>是否给出可复用的参数或清单</strong>、<strong>是否讲清失败案例</strong>。只演示成功流程的课程，学完遇到素材差异仍然无从下手；给出参数区间并解释适用条件的课程，迁移性明显更好。时长不是判断标准，2 小时的密集实操往往胜过 8 小时的界面漫游。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 / 学习路径 -->
+    <section class="block" id="zhinan" aria-labelledby="zhinanTitle">
+      <div class="block-head">
+        <h2 id="zhinanTitle">从零到成片的学习顺序</h2>
+        <span class="sub">按能力阶段排列</span>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div><h3>先跑通一条完整成片</h3><p>用剪映做一条 60 秒竖屏口播，只求导出成功。这一步的目标是熟悉素材导入、轨道、字幕与导出，不追求效果。</p></div>
+        </div>
+        <div class="step">
+          <div><h3>补齐音频与字幕两个短板</h3><p>音频先学降噪与压缩，字幕先学断句与安全区。这两项对完播率的影响通常大于画面特效，投入产出比最高。</p></div>
+        </div>
+        <div class="step">
+          <div><h3>再学运镜与构图</h3><p>此时再回头看拍摄端，会更容易理解为什么某些镜头剪不进去。竖屏构图的人物占比、头顶留白，都是这一阶段的具体课题。</p></div>
+        </div>
+        <div class="step">
+          <div><h3>进入调色与包装</h3><p>调色从一级校正学起，先能还原正常曝光，再谈风格化。包装从字幕排版学起，花字动效放在最后，避免喧宾夺主。</p></div>
+        </div>
+        <div class="step">
+          <div><h3>按片型做专项训练</h3><p>确定自己要做口播、Vlog 还是访谈，再做针对性练习。三种片型的切点逻辑、素材比例和响度目标都不同，混着学容易两头不靠。</p></div>
+        </div>
+        <div class="step">
+          <div><h3>用商单规范反向校验</h3><p>拿一份真实交付清单对照自己的成片，检查尺寸、时长、字幕安全区与授权归档，把作品变成可交付的成品。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq" aria-labelledby="faqTitle">
+      <div class="block-head">
+        <h2 id="faqTitle">剪辑学习常见问答</h2>
+        <span class="sub">6 个高频问题</span>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>零基础第一次剪辑，选剪映还是 Premiere？</summary>
+          <div class="ans">先看你的成片目标。如果主要做竖屏口播、Vlog 这类短视频，剪映的上手成本明显更低，字幕与音频处理都内置了常用预设；如果目标是商单交付、需要多平台尺寸输出与精细调色，Premiere 或达芬奇的流程更完整。两者并不冲突，很多人的路径是剪映入门、半年后转到专业软件。</div>
+        </details>
+        <details>
+          <summary>口播视频的底噪一直去不干净，问题出在哪？</summary>
+          <div class="ans">先确认底噪类型。持续的低频嗡嗡声多半来自空调或电器，用采样降噪效果最好；不规则的嘶声属于高频噪声，适合用均衡削减高频段。如果降噪后声音发闷，说明降噪强度过高，建议把强度控制在 30%—50%，再补一点高频提亮。录音端的距离和房间软装，往往比后期降噪更关键。</div>
+        </details>
+        <details>
+          <summary>调色时肤色发灰，应该先调什么？</summary>
+          <div class="ans">先做一级校正，把曝光和白平衡拉回正常，再谈风格。肤色发灰通常是两个原因：整体对比不足，或者风格化阶段把橙色饱和度压得太低。处理方法是单独建一个肤色保护节点，用限定器选中面部区域，把饱和度拉回自然区间，再让风格化节点绕开这个区域。</div>
+        </details>
+        <details>
+          <summary>Vlog 和访谈片的剪辑节奏有什么本质区别？</summary>
+          <div class="ans">Vlog 允许跳切、允许保留无信息镜头，节奏服务于情绪和陪伴感；访谈片必须保留语义完整性，切点要避开语义停顿，节奏服务于信息传达。判断方法很简单：把 Vlog 的剪法套到访谈上，观众会觉得被访者话没说完；把访谈的剪法套到 Vlog 上，观众会觉得拖沓。</div>
+        </details>
+        <details>
+          <summary>竖屏运镜和横屏运镜的构图差别在哪？</summary>
+          <div class="ans">主要差别在横向空间被压缩。横屏可以容纳并排的人物和环境关系，竖屏更适合纵向层次——前景、人物、背景的堆叠。跟随镜头在竖屏里要降低移动幅度，否则人物容易出画；推拉镜头则可以利用纵向空间做更强的纵深变化。稳定器的三轴力度也要相应调低，避免轻微晃动被放大。</div>
+        </details>
+        <details>
+          <summary>商单交付前，验收清单通常要检查哪几项？</summary>
+          <div class="ans">常见检查项包括：画面尺寸与平台要求是否一致、字幕是否落在安全区内、片头片尾时长是否超限、BGM 与素材授权凭证是否齐全、响度是否达到平台参考值、文件命名是否符合客户规范。返修沟通时，把这些项逐条对照，能减少来回修改的次数。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="pinglun" aria-labelledby="pinglunTitle">
+      <div class="block-head">
+        <h2 id="pinglunTitle">学员评论</h2>
+        <span class="sub">近 30 天 16 条精选</span>
+      </div>
+      <div class="comments">
+        <div class="comment"><div class="comment-head"><span class="avatar">林</span><strong>林间剪片</strong><time>11-08 10:12</time></div><p>达芬奇那节的< b>肤色保护节点</b>讲得很清楚，逆光人像终于不发灰了。就是并行节点混合器那部分我看了三遍才懂。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">陈</span><strong>陈小满</strong><time>11-08 09:41</time></div><p>口播降噪的顺序提醒很有用。我之前先均衡后降噪，越处理越吵，换成降噪在前之后底噪明显下去了。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">周</span><strong>周游的镜头</strong><time>11-07 22:30</time></div><p>竖屏运镜第 4 节的跟随镜头演示不错，不过稳定器参数只给了一个参考值，不同机器可能还得自己试。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">苏</span><strong>苏打水不加冰</strong><time>11-07 20:05</time></div><p>Vlog 三段式模板直接拿来改了，开场钩子那段确实有效，完播率比之前高了一些。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">何</span><strong>何以为剪</strong><time>11-07 18:22</time></div><p>访谈片切点那节讲越轴风险讲得细，我之前一直没注意双机位切换会让人迷失方位。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">赵</span><strong>赵四的后期</strong><time>11-06 21:15</time></div><p>商单验收清单很实用，尤其是授权凭证归档那条，之前吃过亏。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">吴</span><strong>吴桐影记</strong><time>11-06 16:48</time></div><p>字幕安全区那节的数据挺实在，标了几种机型的遮挡高度。中规中矩但确实解决了问题。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">郑</span><strong>郑在剪辑</strong><time>11-05 19:33</time></div><p>AI 辅助粗剪那节有点短，语音转写的校对流程讲得可以，但批量替换同音字的部分希望能再展开。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">孙</span><strong>孙悟饭的猫</strong><time>11-05 14:07</time></div><p>剪映时间线基础适合完全没碰过的人，我妹妹跟着做了一遍就导出成片了。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">马</span><strong>马路边边</strong><time>11-04 22:50</time></div><p>调色顺序讲得对，先校正再风格化，我之前顺序反了，画面一直发脏。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">黄</span><strong>黄灯亮了</strong><time>11-04 17:12</time></div><p>直播回放的访谈实操不错，现场拆解比录播有感觉，就是画质一般。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">许</span><strong>许愿不加班</strong><time>11-03 21:40</time></div><p>花字动效那节讲得克制，没有堆特效，这点挺好。很多课一上来就教各种转场，其实用不上。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">李</span><strong>李子树下</strong><time>11-03 15:26</time></div><p>响度参考值终于有人讲清楚了，之前一直只看峰值电平，导出后总觉得比别人小声。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">韩</span><strong>韩梅梅的相机</strong><time>11-02 20:18</time></div><p>运镜课能不能补一节手持防抖的？稳定器那部分我用不上，平时都是直接拿手机拍。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">冯</span><strong>冯唐易老</strong><time>11-02 11:03</time></div><p>整体挺好，就是部分课程录屏还是旧版界面，跟着操作时按钮位置对不上。</p></div>
+        <div class="comment"><div class="comment-head"><span class="avatar">曹</span><strong>曹小鱼的片场</strong><time>11-01 19:55</time></div><p>从剪辑基础到商单交付这条路走下来，确实比东看一节西看一节效率高。节奏安排得合理。</p></div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="zixun" aria-labelledby="zixunTitle">
+      <div class="block-head">
+        <h2 id="zixunTitle">剪辑圈新动态</h2>
+        <span class="sub">11 月 1 日—11 月 8 日</span>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/daodejing-news06/600/400" alt="达芬奇 19 节点混合器更新配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>达芬奇 19 节点混合器功能更新，并行调色流程缩短</h3>
+            <p>新版混合器支持多分支节点直接预览合成结果，夜景人像的肤色分离流程从六步压缩到四步。已有三门调色课程同步更新演示。</p>
+            <div class="news-meta"><span>11 月 8 日</span><span>软件更新</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/vertical-video11/600/400" alt="竖屏口播混音共识配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>竖屏口播混音共识：-14 LUFS 成为多数平台参考值</h3>
+            <p>多个短视频平台在创作者文档中统一了响度参考区间，访谈类内容可下探至 -16 LUFS。混音顺序的讨论热度随之上升。</p>
+            <div class="news-meta"><span>11 月 6 日</span><span>平台规范</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/zimu-safe07/600/400" alt="竖屏字幕安全区实测配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>竖屏字幕安全区实测数据发布，底部遮挡高度差异明显</h3>
+            <p>实测覆盖 12 款主流机型，底部操作栏遮挡高度从 68px 到 112px 不等。字幕排版课程据此调整了安全区参数。</p>
+            <div class="news-meta"><span>11 月 5 日</span><span>实测数据</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/ai-subtitle19/600/400" alt="语音转写字幕校对讨论配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>语音转写字幕校对成为社区讨论焦点，错字率仍是痛点</h3>
+            <p>创作者反馈转写准确率在安静环境下可达 96%，嘈杂环境降至 82%。批量替换同音字的工作流被频繁提及。</p>
+            <div class="news-meta"><span>11 月 4 日</span><span>社区讨论</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/shangdan-list14/600/400" alt="商单验收清单更新配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>商单验收清单新增 4:5 封面规格，信息流投放要求细化</h3>
+            <p>部分品牌方在交付要求中加入 4:5 竖版封面与三秒静帧预览，剪辑交付环节需要额外导出两套文件。</p>
+            <div class="news-meta"><span>11 月 3 日</span><span>交付规范</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <img src="https://picsum.photos/seed/vlog-hook23/600/400" alt="Vlog 开场钩子时长统计配图" width="600" height="400" loading="lazy">
+          <div>
+            <h3>Vlog 开场钩子时长统计：前 3 秒决定七成留存</h3>
+            <p>对 200 支高播放 Vlog 的抽样显示，开场 3 秒内出现人物或冲突的条目，平均完播率高出 21 个百分点。</p>
+            <div class="news-meta"><span>11 月 1 日</span><span>内容趋势</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="tuijian" aria-labelledby="tuijianTitle">
+      <div class="block-head">
+        <h2 id="tuijianTitle">延伸学习方向</h2>
+        <span class="sub">8 个进阶主题</span>
+      </div>
+      <div class="reco-grid">
+        <a class="reco" href="/#jingxuan"><span class="num">01</span>节点式调色工作流<span>调色实战</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">02</span>手持防抖与呼吸感镜头<span>拍摄运镜</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">03</span>双机位访谈的越轴规避<span>口播与访谈</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">04</span>音量包络与关键帧联动<span>音频处理</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">05</span>竖屏底部安全区排版<span>字幕与包装</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">06</span>三段式分镜表模板<span>Vlog 叙事</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">07</span>多平台尺寸批量导出<span>商单交付</span></a>
+        <a class="reco" href="/#jingxuan"><span class="num">08</span>同音错字批量校对<span>AI 辅助创作</span></a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：热门榜单 -->
+    <section class="block" id="bangdan" aria-labelledby="bangdanTitle">
+      <div class="block-head">
+        <h2 id="bangdanTitle">本周课程热度榜</h2>
+        <span class="sub">按学习完成数排列</span>
+      </div>
+      <div class="rank">
+        <div class="rank-item"><span class="rank-no">1</span><div><h3>剪映专业版时间线基础 12 讲</h3><p>剪辑基础 · 32 小节</p></div><span class="rank-score">4.9</span></div>
+        <div class="rank-item"><span class="rank-no">2</span><div><h3>达芬奇 19 节点调色实战</h3><p>调色实战 · 28 小节</p></div><span class="rank-score">4.8</span></div>
+        <div class="rank-item"><span class="rank-no">3</span><div><h3>竖屏运镜 8 种走位与稳定器设置</h3><p>拍摄运镜 · 24 小节</p></div><span class="rank-score">4.8</span></div>
+        <div class="rank-item"><span class="rank-no">4</span><div><h3>口播音频三件套：降噪 · 均衡 · 压缩</h3><p>音频处理 · 18 小节</p></div><span class="rank-score">4.7</span></div>
+        <div class="rank-item"><span class="rank-no">5</span><div><h3>商单交付规范与验收清单</h3><p>商单交付 · 16 小节</p></div><span class="rank-score">4.7</span></div>
+        <div class="rank-item"><span class="rank-no">6</span><div><h3>访谈纪录片剪辑：呼吸感与切点</h3><p>口播与访谈 · 19 小节</p></div><span class="rank-score">4.8</span></div>
+        <div class="rank-item"><span class="rank-no">7</span><div><h3>Vlog 叙事结构：从流水账到三段式</h3><p>Vlog 叙事 · 21 小节</p></div><span class="rank-score">4.6</span></div>
+        <div class="rank-item"><span class="rank-no">8</span><div><h3>字幕排版与花字包装 15 讲</h3><p>字幕与包装 · 20 小节</p></div><span class="rank-score">4.5</span></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 右辅助栏 -->
+  <aside class="side-col" aria-label="辅助信息">
+    <div class="side-card">
+      <h3>热门课程 <span>本周</span></h3>
+      <div class="hot-mini">
+        <a href="/#jingxuan"><i>01</i>剪映时间线基础 12 讲</a>
+        <a href="/#jingxuan"><i>02</i>达芬奇 19 节点调色实战</a>
+        <a href="/#jingxuan"><i>03</i>竖屏运镜 8 种走位</a>
+        <a href="/#jingxuan"><i>04</i>口播音频三件套</a>
+        <a href="/#jingxuan"><i>05</i>访谈纪录片切点实操</a>
+        <a href="/#jingxuan"><i>06</i>商单交付验收清单</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h3>技能标签</h3>
+      <div class="side-tags">
+        <a href="/#fenlei">节点调色</a>
+        <a href="/#fenlei">肤色保护</a>
+        <a href="/#fenlei">采样降噪</a>
+        <a href="/#fenlei">响度标准</a>
+        <a href="/#fenlei">竖屏构图</a>
+        <a href="/#fenlei">越轴规避</a>
+        <a href="/#fenlei">安全区排版</a>
+        <a href="/#fenlei">批量导出</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h3>更新日志 <span>近 7 天</span></h3>
+      <div class="timeline">
+        <div class="tl-item"><time>11-08</time><p>达芬奇并行节点混合器章节上线</p></div>
+        <div class="tl-item"><time>11-07</time><p>口播降噪参数与波形对比补充</p></div>
+        <div class="tl-item"><time>11-06</time><p>访谈片切点直播回放上传</p></div>
+        <div class="tl-item"><time>11-05</time><p>剪映第 10 节界面录屏替换</p></div>
+        <div class="tl-item"><time>11-03</time><p>Vlog 三段式分镜表模板发布</p></div>
+      </div>
+    </div>
+  </aside>
+
+</div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/#top" aria-label="51视频学院首页">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#1c2733"/>
+            <rect x="6" y="11" width="18" height="18" rx="4" fill="none" stroke="#38c3d6" stroke-width="2"/>
+            <path d="M25 20l9-6v12z" fill="#ff6a3d"/>
+          </svg>
+          <span class="brand-name">51视频学院</span>
+        </a>
+        <p>聚焦短视频剪辑、影视调色、音频处理与拍摄运镜的实战学习内容，按技能阶段组织课程与案例。</p>
+      </div>
+      <div class="footer-col">
+        <h4>技能方向</h4>
+        <a href="/#fenlei">剪辑基础</a>
+        <a href="/#fenlei">调色实战</a>
+        <a href="/#fenlei">音频处理</a>
+        <a href="/#fenlei">拍摄运镜</a>
+      </div>
+      <div class="footer-col">
+        <h4>片型专题</h4>
+        <a href="/#fenlei">口播与访谈</a>
+        <a href="/#fenlei">Vlog 叙事</a>
+        <a href="/#fenlei">字幕与包装</a>
+        <a href="/#fenlei">商单交付</a>
+      </div>
+      <div class="footer-col">
+        <h4>学习支持</h4>
+        <a href="/#zhinan">学习路径</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#pinglun">学员评论</a>
+        <a href="/#zixun">圈内动态</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 51视频学院 · 内容学习与技能交流</span>
+      <span class="demo">部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 移动端导航
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click', function(){
+      var open = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 本地课程筛选
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var grid = document.getElementById('courseGrid');
+  var noResult = document.getElementById('noResult');
+  if(form && input && grid){
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+    function filter(){
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function(card){
+        var text = (card.getAttribute('data-key') || '') + ' ' + card.textContent.toLowerCase();
+        var match = !q || text.toLowerCase().indexOf(q) !== -1;
+        card.style.display = match ? '' : 'none';
+        if(match) shown++;
+      });
+      noResult.style.display = shown === 0 ? 'block' : 'none';
+    }
+    form.addEventListener('submit', function(e){ e.preventDefault(); filter(); });
+    input.addEventListener('input', filter);
+  }
+
+  // 收藏夹按钮的轻量反馈
+  var favBtn = document.getElementById('favBtn');
+  if(favBtn){
+    favBtn.addEventListener('click', function(){
+      var on = favBtn.textContent === '收藏夹';
+      favBtn.textContent = on ? '已收藏 1 门' : '收藏夹';
+      favBtn.style.borderColor = on ? 'var(--accent)' : '';
+      favBtn.style.color = on ? '#fff' : '';
+    });
+  }
+})();
+</script>
+</body>
+          </html>
