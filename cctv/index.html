@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cctv5直播 - 体育赛事观看指南</title>
+<meta name="description" content="cctv5直播汇集央视体育频道的赛事转播安排、项目赛程与观看入口，涵盖篮球、足球、乒乓球、羽毛球、田径、游泳等具体项目，适合想按时间查找比赛与回看片段的体育观众。">
+<meta name="keywords" content="央视体育频道,体育赛事转播,赛事赛程表,乒乓球比赛,篮球联赛">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23133a6b'/%3E%3Cpath d='M14 32h9l5-12 8 26 5-14h9' fill='none' stroke='%23ffd166' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14203a;--ink-2:#3d4d६6;--ink-2:#3d4d66;--ink-3:#6b7a92;
+  --bg:#f2f5fa;--panel:#ffffff;--panel-2:#f7f9fd;
+  --line:#dfe6f0;--line-2:#eaf0f8;
+  --brand:#133a6b;--brand-2:#1f5aa0;--brand-soft:#e8f0fb;
+  --accent:#d94f2b;--accent-soft:#fdeee9;
+  --gold:#c8912a;--gold-soft:#fbf3e2;
+  --green:#1f7a5a;--green-soft:#e6f4ee;
+  --radius:12px;--radius-sm:8px;
+  --shadow:0 1px 2px rgba(20,32,58,.06),0 6px 20px rgba(20,32,58,.06);
+  --sticky-h:104px;
+  --maxw:1340px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 10px)}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.25em}
+li{margin-bottom:.35em}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* ============ 吸顶区 ============ */
+.sticky-wrap{position:sticky;top:0;z-index:60}
+.notice{
+  background:linear-gradient(90deg,#133a6b,#1f5aa0);
+  color:#eaf2ff;font-size:13px;
+}
+.notice-in{
+  max-width:var(--maxw);margin:0 auto;padding:7px 20px;
+  display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+}
+.notice b{color:#ffd166;font-weight:700}
+.notice .dot{width:6px;height:6px;border-radius:50%;background:#ffd166;flex:none}
+.notice .n-list{display:flex;gap:18px;flex-wrap:wrap}
+.notice .n-list span{white-space:nowrap}
+
+.site-head{
+  background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(20,32,58,.03);
+}
+.head-in{
+  max-width:var(--maxw);margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-txt{font-size:20px;font-weight:800;letter-spacing:.3px;color:var(--brand);line-height:1.1}
+.brand-sub{display:block;font-size:11px;font-weight:500;color:var(--ink-3);letter-spacing:1px}
+.head-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1;min-width:0}
+.head-nav a{
+  font-size:13.5px;color:var(--ink-2);padding:6px 10px;border-radius:var(--radius-sm);
+  white-space:nowrap;
+}
+.head-nav a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;flex:none}
+.search-box{display:flex;align-items:center;gap:6px;background:var(--panel-2);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 12px}
+.search-box input{border:0;background:transparent;font-size:13px;width:130px;color:var(--ink);outline:none;font-family:inherit}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;font-size:12.5px;padding:5px 12px;border-radius:999px;cursor:pointer;font-family:inherit;
+}
+.search-box button:hover{background:var(--brand-2)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:7px 14px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;font-family:inherit;
+}
+.btn-ghost:hover{border-color:var(--brand-2);color:var(--brand-2);text-decoration:none}
+
+/* ============ 首屏 ============ */
+.hero{
+  background:
+    radial-gradient(900px 320px at 82% -10%,rgba(31,90,160,.16),transparent 70%),
+    linear-gradient(180deg,#fff,#f6f9fe 70%,var(--bg));
+  border-bottom:1px solid var(--line);
+}
+.hero-in{
+  max-width:var(--maxw);margin:0 auto;padding:34px 20px 30px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.5px;
+  color:var(--brand-2);font-weight:700;background:var(--brand-soft);
+  padding:5px 12px;border-radius:999px;margin-bottom:14px;
+}
+.hero h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:-.5px;color:var(--brand);margin-bottom:14px}
+.hero-lead{font-size:15.5px;color:var(--ink-2);max-width:54ch;margin-bottom:18px}
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.hero-tags span{
+  font-size:12.5px;color:var(--ink-2);background:#fff;border:1px solid var(--line);
+  padding:4px 11px;border-radius:999px;
+}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;
+  font-size:14px;font-weight:700;padding:11px 22px;border-radius:999px;
+  box-shadow:0 6px 16px rgba(217,79,43,.24);
+}
+.btn-primary:hover{background:#c04322;text-decoration:none;color:#fff}
+.btn-line{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand);
+  font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;border:1px solid var(--line);
+}
+.btn-line:hover{border-color:var(--brand-2);text-decoration:none}
+.hero-visual{position:relative}
+.hero-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+  padding:16px;position:relative;z-index:2;
+}
+.hero-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:12.5px;color:var(--ink-3)}
+.live-pill{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);color:var(--accent);font-weight:700;padding:3px 10px;border-radius:999px;font-size:11.5px}
+.live-pill i{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.slot-list{display:grid;gap:8px}
+.slot{
+  display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;
+  padding:9px 10px;border-radius:10px;background:var(--panel-2);border:1px solid var(--line-2);
+}
+.slot time{font-size:12px;font-weight:700;color:var(--brand-2);font-variant-numeric:tabular-nums}
+.slot .st{font-size:13.5px;font-weight:600;color:var(--ink)}
+.slot .sp{font-size:11.5px;color:var(--ink-3);display:block;font-weight:400}
+.slot .badge{font-size:10.5px;padding:2px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-3);white-space:nowrap}
+.hero-visual::after{
+  content:"";position:absolute;inset:auto -14px -14px auto;width:70%;height:70%;
+  border-radius:18px;background:repeating-linear-gradient(135deg,#dbe7f7 0 8px,#eef4fd 8px 16px);
+  z-index:1;
+}
+
+/* ============ 布局 ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.layout{
+  display:grid;grid-template-columns:180px minmax(0,1fr) 280px;gap:26px;
+  padding-top:26px;padding-bottom:40px;align-items:start;
+}
+.layout > *{min-width:0}
+
+/* 左频道 */
+.chan{
+  position:sticky;top:calc(var(--sticky-h) + 14px);
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 12px;box-shadow:var(--shadow);
+}
+.chan-title{font-size:11.5px;letter-spacing:1.5px;color:var(--ink-3);font-weight:700;padding:0 8px 10px}
+.chan a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  font-size:13.5px;color:var(--ink-2);padding:7px 9px;border-radius:var(--radius-sm);
+}
+.chan a span{font-size:11px;color:var(--ink-3)}
+.chan a:hover,.chan a.on{background:var(--brand-soft);color:var(--brand);text-decoration:none;font-weight:600}
+.chan a.on span{color:var(--brand-2)}
+
+/* ============ 主栏通用 ============ */
+.sec{margin-bottom:34px;scroll-margin-top:calc(var(--sticky-h) + 10px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--line)}
+.sec-head h2{font-size:20px;letter-spacing:-.2px;display:flex;align-items:center;gap:9px}
+.sec-head h2::before{content:"";width:4px;height:19px;border-radius:2px;background:var(--accent);flex:none}
+.sec-head .sec-note{font-size:12.5px;color:var(--ink-3);white-space:nowrap}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pad{padding:18px 20px}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:1fr 210px;gap:20px}
+.overview p{color:var(--ink-2);font-size:14.5px}
+.ov-side{background:var(--panel-2);border:1px solid var(--line-2);border-radius:var(--radius-sm);padding:14px}
+.ov-side h4{font-size:12.5px;color:var(--ink-3);letter-spacing:1px;margin-bottom:10px}
+.ov-side ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.ov-side li{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);margin:0}
+.ov-side li b{color:var(--brand);font-variant-numeric:tabular-nums}
+
+/* 精选卡片 */
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.pick{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .16s ease,border-color .16s ease;
+}
+.pick:hover{transform:translateY(-2px);border-color:#c6d8ef}
+.pick img{width:100%;height:132px;object-fit:cover;background:var(--line-2)}
+.pick-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.pick h3{font-size:15px;line-height:1.4}
+.pick .tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--panel-2);border:1px solid var(--line);color:var(--ink-2);white-space:nowrap}
+.tag.hot{background:var(--accent-soft);border-color:#f6d3c8;color:var(--accent)}
+.tag.g{background:var(--green-soft);border-color:#cbe8dc;color:var(--green)}
+.tag.gold{background:var(--gold-soft);border-color:#f0e0bd;color:#8f6412}
+.tag.b{background:var(--brand-soft);border-color:#cfe0f7;color:var(--brand-2)}
+.pick .look{font-size:13px;color:var(--ink-2);line-height:1.65;flex:1}
+.pick .meta{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:8px;font-variant-numeric:tabular-nums}
+
+/* 最新动态列表 */
+.feed{list-style:none;margin:0;padding:0}
+.feed li{
+  display:grid;grid-template-columns:78px 1fr auto;gap:12px;align-items:start;
+  padding:11px 4px;border-bottom:1px dashed var(--line-2);margin:0;
+}
+.feed li:last-child{border-bottom:0}
+.feed time{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums;padding-top:2px}
+.feed .ft{font-size:14px;font-weight:600;color:var(--ink)}
+.feed .ft a{color:var(--ink)}
+.feed .ft a:hover{color:var(--brand-2)}
+.feed .fs{font-size:13px;color:var(--ink-2);line-height:1.6}
+.feed .fb{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--brand-soft);color:var(--brand-2);white-space:nowrap;font-weight:600;align-self:center}
+.feed .fb.live{background:var(--accent-soft);color:var(--accent)}
+.feed .fb.new{background:var(--green-soft);color:var(--green)}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat{
+  display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:13px 14px;transition:.15s;
+}
+.cat:hover{border-color:var(--brand-2);text-decoration:none;background:#fbfdff;transform:translateY(-1px)}
+.cat b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:3px}
+.cat span{font-size:12px;color:var(--ink-3);line-height:1.5;display:block}
+.cat em{font-style:normal;font-size:11px;color:var(--brand-2);margin-top:6px;display:inline-block;font-weight:600}
+
+/* 深度解析 */
+.deep{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+.deep h3{font-size:16.5px;margin:22px 0 10px;color:var(--brand);display:flex;align-items:center;gap:8px}
+.deep h3:first-of-type{margin-top:4px}
+.deep h3::before{content:"";width:3px;height:15px;background:var(--gold);border-radius:2px;flex:none}
+.deep p,.deep li{font-size:14.5px;color:var(--ink-2)}
+.deep strong{color:var(--ink)}
+.deep .callout{
+  background:var(--brand-soft);border-left:3px solid var(--brand-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:12px 16px;margin:14px 0;font-size:14px;color:#1c3f6e;
+}
+.deep .callout p:last-child{margin-bottom:0}
+.cmp{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13.5px}
+.cmp th,.cmp td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.cmp th{background:var(--panel-2);color:var(--ink);font-weight:700;font-size:13px}
+.cmp td{color:var(--ink-2)}
+
+/* 体验指南 步骤 */
+.steps{counter-reset:st;display:grid;gap:12px}
+.step{
+  counter-increment:st;position:relative;padding:14px 16px 14px 56px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+}
+.step::before{
+  content:"0" counter(st);position:absolute;left:14px;top:13px;
+  width:30px;height:30px;display:grid;place-items:center;border-radius:9px;
+  background:var(--brand);color:#fff;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+.step h4{font-size:14.5px;margin-bottom:4px}
+.step p{font-size:13.5px;color:var(--ink-2);margin:0}
+
+/* FAQ */
+.faq details{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:0;margin-bottom:9px;overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-size:14.5px;font-weight:600;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:19px;color:var(--brand-2);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details[open] summary{background:var(--panel-2);border-bottom:1px solid var(--line-2)}
+.faq .ans{padding:13px 16px;font-size:13.8px;color:var(--ink-2)}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.cmts{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:12px}
+.cmt{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:13px 15px}
+.cmt-top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;flex:none}
+.cmt-top b{font-size:13px;color:var(--ink)}
+.cmt-top time{font-size:11px;color:var(--ink-3);margin-left:auto}
+.cmt p{font-size:13.3px;color:var(--ink-2);margin:0;line-height:1.65}
+.cmt .on{color:var(--brand-2);font-weight:600}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.news-item{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.news-item img{width:100%;height:140px;object-fit:cover;background:var(--line-2)}
+.news-item .nb{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.news-item h3{font-size:14.5px;line-height:1.45}
+.news-item h3 a{color:var(--ink)}
+.news-item h3 a:hover{color:var(--brand-2);text-decoration:none}
+.news-item .nd{font-size:11.5px;color:var(--ink-3);display:flex;gap:8px;align-items:center;font-variant-numeric:tabular-nums}
+.news-item p{font-size:13px;color:var(--ink-2);margin:0;line-height:1.6;flex:1}
+
+/* 相关推荐 标签索引 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{
+  font-size:13px;padding:7px 14px;border-radius:999px;background:var(--panel);
+  border:1px solid var(--line);color:var(--ink-2);
+}
+.reco a:hover{border-color:var(--brand-2);color:var(--brand-2);background:#fbfdff;text-decoration:none}
+.reco a b{color:var(--brand);font-weight:700}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:rk}
+.rank li{
+  counter-increment:rk;display:grid;grid-template-columns:30px 1fr auto;gap:11px;align-items:center;
+  padding:10px 6px;border-bottom:1px dashed var(--line-2);margin:0;
+}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(rk);width:24px;height:24px;display:grid;place-items:center;border-radius:7px;
+  background:var(--panel-2);border:1px solid var(--line);color:var(--ink-3);font-size:12px;font-weight:700;
+}
+.rank li:nth-child(-n+3)::before{background:var(--gold-soft);border-color:#f0e0bd;color:#8f6412}
+.rank .rt{font-size:13.8px;font-weight:600;color:var(--ink)}
+.rank .rs{font-size:11.5px;color:var(--ink-3);display:block;font-weight:400;line-height:1.5}
+.rank .rv{font-size:12px;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 右栏 */
+.aside{position:sticky;top:calc(var(--sticky-h) + 14px);display:grid;gap:16px}
+.as-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.as-head{padding:12px 15px;border-bottom:1px solid var(--line-2);font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(180deg,#fff,#fafcff)}
+.as-head span{font-size:11px;color:var(--ink-3);font-weight:500}
+.as-body{padding:10px 15px 14px}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl li{position:relative;padding:0 0 13px 16px;margin:0;border-left:2px solid var(--line-2)}
+.tl li:last-child{border-left-color:transparent;padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-6px;top:5px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand-2)}
+.tl li.now::before{background:var(--accent);border-color:var(--accent)}
+.tl time{font-size:11px;color:var(--ink-3);display:block;font-variant-numeric:tabular-nums}
+.tl b{font-size:13px;color:var(--ink);display:block;line-height:1.45}
+.tl span{font-size:11.5px;color:var(--ink-3);display:block;line-height:1.5}
+.as-links{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.as-links a{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--ink-2);padding:6px 4px;border-radius:6px}
+.as-links a:hover{background:var(--panel-2);color:var(--brand-2);text-decoration:none}
+.as-links a i{font-style:normal;font-size:11px;color:var(--ink-3)}
+.search-res{
+  display:none;margin-top:14px;background:var(--gold-soft);border:1px solid #f0e0bd;border-radius:var(--radius-sm);
+  padding:12px 15px;font-size:13.5px;color:#7a5a12;
+}
+.search-res.show{display:block}
+.search-res b{color:#5c4409}
+
+/* 页尾 */
+.foot{background:#0f2747;color:#c3d2e6;margin-top:10px}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:34px 20px 20px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px}
+.foot h4{font-size:13px;color:#fff;margin-bottom:11px;letter-spacing:.5px}
+.foot p{font-size:12.8px;line-height:1.75;color:#a8bcd6;margin:0 0 8px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot li{margin:0}
+.foot a{color:#c3d2e6;font-size:12.8px}
+.foot a:hover{color:#fff;text-decoration:none}
+.foot .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.foot .fbrand b{color:#fff;font-size:16px;letter-spacing:.5px}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12);max-width:var(--maxw);margin:0 auto;
+  padding:14px 20px 22px;font-size:11.5px;color:#8fa6c4;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+}
+.foot-bottom .demo{color:#7f97b6}
+
+/* ============ 响应式 ============ */
+@media (max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr);gap:22px}
+  .aside{grid-column:1 / -1;position:static;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));display:grid}
+  .chan{position:static}
+}
+@media (max-width:1024px){
+  :root{--sticky-h:112px}
+  .hero-in{grid-template-columns:1fr;gap:24px}
+  .hero-visual{max-width:520px}
+  .overview{grid-template-columns:1fr}
+  .head-nav{order:3;flex-basis:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:thin}
+  .head-in{flex-wrap:wrap;row-gap:6px}
+  .foot-in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  .chan{display:block;overflow-x:auto;padding:10px}
+  .chan .chan-title{display:none}
+  .chan{display:flex;gap:6px;flex-wrap:nowrap;align-items:center;border-radius:var(--radius)}
+  .chan a{white-space:nowrap;padding:7px 12px;border:1px solid var(--line);background:#fff}
+  .chan a span{display:none}
+  .deep{padding:18px 16px}
+}
+@media (max-width:740px){
+  :root{--sticky-h:128px}
+  body{font-size:15px}
+  .head-in{padding:8px 14px;gap:10px}
+  .search-box input{width:90px}
+  .brand-txt{font-size:18px}
+  .notice-in{padding:6px 14px;font-size:12px}
+  .notice .n-list{gap:12px}
+  .wrap{padding:0 14px}
+  .hero-in{padding:24px 14px 22px}
+  .feed li{grid-template-columns:1fr auto;gap:4px 10px}
+  .feed time{grid-column:1 / -1;font-size:11.5px;padding:0}
+  .grid-cards{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
+  .pick img{height:104px}
+  .cmts,.news{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr;gap:20px}
+  .foot-bottom{flex-direction:column;gap:6px}
+  .cmp{font-size:12.5px}
+  .cmp th,.cmp td{padding:7px 8px}
+  .sec-head{flex-wrap:wrap;gap:6px}
+  .sec-head .sec-note{white-space:normal}
+}
+@media (max-width:400px){
+  .slot{grid-template-columns:46px 1fr}
+  .slot .badge{display:none}
+  .search-box input{width:72px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="notice" role="region" aria-label="更新公告">
+    <div class="notice-in">
+      <span class="dot" aria-hidden="true"></span>
+      <b>11 月 8 日赛事更新</b>
+      <div class="n-list">
+        <span>今晚 19:35 男篮常规赛第 9 轮</span>
+        <span>新增 12 场乒乓球全锦赛回看</span>
+        <span>羽毛球大师赛决赛日调整至 21:00</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-head">
+    <div class="head-in">
+      <a class="brand" href="/#top" aria-label="cctv5直播首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#133a6b"/>
+          <path d="M13 33h9l5-13 9 27 5-15h10" fill="none" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="50" cy="17" r="4" fill="#d94f2b"/>
+        </svg>
+        <span class="brand-txt">cctv5直播<span class="brand-sub">体育赛事转播指南</span></span>
+      </a>
+      <nav class="head-nav" aria-label="主题导航">
+        <a href="/#overview">频道概览</a>
+        <a href="/#picks">赛事精选</a>
+        <a href="/#feed">今日动态</a>
+        <a href="/#cats">项目分类</a>
+        <a href="/#deep">转播解析</a>
+        <a href="/#guide">观看顺序</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#rank">本周榜单</a>
+      </nav>
+      <div class="head-tools">
+        <form class="search-box" role="search" id="searchForm" autocomplete="off">
+          <label for="q" style="position:absolute;left:-9999px">搜索赛事或项目</label>
+          <input id="q" type="search" placeholder="搜赛事 / 项目" aria-label="搜索赛事或项目">
+          <button type="submit">查找</button>
+        </form>
+        <a class="btn-ghost" href="/#feed">今日赛程</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="h1-title">
+    <div class="hero-in">
+      <div>
+        <span class="hero-kicker">央视体育频道 · 赛事转播</span>
+        <h1 id="h1-title">cctv5直播</h1>
+        <p class="hero-lead">这里汇总央视体育频道的赛事转播安排，覆盖男篮联赛、中超与足协杯、乒乓球全锦赛、羽毛球大师赛、田径大奖赛、游泳冠军赛等具体项目，按日期与开赛时间逐场列出，附带回看片段与解说阵容信息。</p>
+        <div class="hero-tags">
+          <span>男篮常规赛第 9 轮</span>
+          <span>乒乓球全锦赛</span>
+          <span>羽毛球大师赛决赛</span>
+          <span>中超第 29 轮</span>
+          <span>短池游泳世界杯</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn-primary" href="/#feed">查看今日全部赛程</a>
+          <a class="btn-line" href="/#guide">第一次看怎么选场次</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-head">
+            <strong style="color:var(--ink);font-size:13.5px">11 月 8 日 转播时段</strong>
+            <span class="live-pill"><i></i>正在直播</span>
+          </div>
+          <div class="slot-list">
+            <div class="slot">
+              <time>14:00</time>
+              <div><span class="st">乒乓球全锦赛 男单半决赛</span><span class="sp">CCTV5 · 解说：李戈</span></div>
+              <span class="badge">已结束</span>
+            </div>
+            <div class="slot">
+              <time>16:30</time>
+              <div><span class="st">短池游泳世界杯 女子 200 米自由泳</span><span class="sp">CCTV5+ · 解说：周宁</span></div>
+              <span class="badge">回看</span>
+            </div>
+            <div class="slot">
+              <time>19:35</time>
+              <div><span class="st">男篮常规赛第 9 轮 广东 vs 浙江</span><span class="sp">CCTV5 · 解说：杨健</span></div>
+              <span class="badge">直播中</span>
+            </div>
+            <div class="slot">
+              <time>21:00</time>
+              <div><span class="st">羽毛球大师赛 男双决赛</span><span class="sp">CCTV5 · 解说：洪钢</span></div>
+              <span class="badge">待开播</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 左：频道索引 -->
+      <nav class="chan" aria-label="频道分类索引">
+        <div class="chan-title">项目频道</div>
+        <a href="/#cats" class="on">篮球 <span>4</span></a>
+        <a href="/#cats">足球 <span>6</span></a>
+        <a href="/#cats">乒乓球 <span>5</span></a>
+        <a href="/#cats">羽毛球 <span>3</span></a>
+        <a href="/#cats">田径 <span>2</span></a>
+        <a href="/#cats">游泳 <span>3</span></a>
+        <a href="/#cats">排球 <span>2</span></a>
+        <a href="/#cats">冰雪项目 <span>2</span></a>
+        <a href="/#rank">本周榜单</a>
+        <a href="/#reco">延伸方向</a>
+      </nav>
+
+      <!-- 中：主内容 -->
+      <div>
+
+        <div class="search-res" id="searchRes" role="status" aria-live="polite"></div>
+
+        <!-- 1 概览 -->
+        <section class="sec" id="overview" aria-labelledby="t-overview">
+          <div class="sec-head">
+            <h2 id="t-overview">频道概览：这个频道到底播哪些项目</h2>
+            <span class="sec-note">11 月 8 日整理</span>
+          </div>
+          <div class="card pad">
+            <div class="overview">
+              <div>
+                <p>cctv5直播所对应的央视体育频道，是一个以赛事现场转播为主体的综合体育频道。它的内容不是单一联赛，而是按赛季轮转的多项目组合：秋冬以篮球、足球、乒乓球、羽毛球为主，穿插短池游泳与室内田径；春夏则偏向排球、田径大奖赛和室外游泳赛事。</p>
+                <p>从观看角度拆开，具体可分为四类。第一类是职业联赛，如男篮常规赛、中超与足协杯，场次密集、周期长，适合长期跟踪。第二类是单项锦标赛，如乒乓球全锦赛、羽毛球大师赛，赛程集中、淘汰赛阶段看点高，适合挑决赛日集中看。第三类是国际赛事与世界杯分站，如短池游泳世界杯、田径室内巡回赛，时长较短、节奏快。第四类是综合性运动会与特别节目，如全运会单项决赛、赛事集锦与人物专访。</p>
+                <p>不同项目的转播节奏差别明显。联赛通常固定在晚间 19:35 或 20:00 开赛，一场约 2 小时；乒乓球的单场时长在 40 分钟到 1 小时之间，一天可连播多场；羽毛球决赛日常从下午延续到夜场。理解这个节奏，才能判断什么时间打开频道能看到完整一场，而不是半场插进去。</p>
+              </div>
+              <div class="ov-side">
+                <h4>今日转播统计</h4>
+                <ul>
+                  <li><span>直播场次</span><b>9</b></li>
+                  <li><span>回看新增</span><b>12</b></li>
+                  <li><span>涉及项目</span><b>6</b></li>
+                  <li><span>最长单场</span><b>2 小时 15 分</b></li>
+                  <li><span>解说场次</span><b>7</b></li>
+                  <li><span>决赛日</span><b>2</b></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 精选 -->
+        <section class="sec" id="picks" aria-labelledby="t-picks">
+          <div class="sec-head">
+            <h2 id="t-picks">值得排进日程的赛事精选</h2>
+            <span class="sec-note">按开赛时间排序 · 8 场</span>
+          </div>
+          <div class="grid-cards">
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-lanqiu09/400/300" width="400" height="300" loading="lazy" alt="男篮常规赛第9轮广东对浙江比赛现场">
+              <div class="pick-body">
+                <h3>男篮常规赛第 9 轮 广东 vs 浙江</h3>
+                <div class="tags"><span class="tag b">篮球</span><span class="tag">CBA 常规赛</span><span class="tag hot">直播中</span></div>
+                <p class="look">两队本赛季首次交手，广东外线轮换缩短到八人，浙江则依赖双外援挡拆。前三节节奏偏慢，第四节大概率进入犯规战术。</p>
+                <div class="meta"><span>19:35 开赛</span><span>热度 96</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-pingpangqj/400/300" width="400" height="300" loading="lazy" alt="乒乓球全锦赛男单半决赛对阵现场">
+              <div class="pick-body">
+                <h3>乒乓球全锦赛 男单半决赛</h3>
+                <div class="tags"><span class="tag b">乒乓球</span><span class="tag">全国锦标赛</span><span class="tag g">已结束</span></div>
+                <p class="look">两位直板选手同日出场，前三板争夺激烈。比赛采用七局四胜，平均每局耗时 7 分钟，回看可在 2 小时内看完两场。</p>
+                <div class="meta"><span>14:00 开赛</span><span>评分 9.1</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-yumaoqiu/400/300" width="400" height="300" loading="lazy" alt="羽毛球大师赛男双决赛球网特写">
+              <div class="pick-body">
+                <h3>羽毛球大师赛 男双决赛</h3>
+                <div class="tags"><span class="tag b">羽毛球</span><span class="tag">大师赛</span><span class="tag gold">决赛日</span></div>
+                <p class="look">决赛对阵为两对亚洲组合，均以平抽快挡见长。第一局通常决定整场走势，接发球质量是关键观察点。</p>
+                <div class="meta"><span>21:00 开赛</span><span>热度 88</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-zhongchao29/400/300" width="400" height="300" loading="lazy" alt="中超第29轮球场夜景全景">
+              <div class="pick-body">
+                <h3>中超第 29 轮 上海海港 vs 成都蓉城</h3>
+                <div class="tags"><span class="tag b">足球</span><span class="tag">中超联赛</span><span class="tag">争冠关键</span></div>
+                <p class="look">积分榜前两名直接对话，胜者基本锁定冠军悬念。海港主打边路传中，蓉城更依赖中前场压迫后的快速反击。</p>
+                <div class="meta"><span>11 月 9 日 19:35</span><span>热度 94</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-youyong200/400/300" width="400" height="300" loading="lazy" alt="短池游泳世界杯女子200米自由泳泳道">
+              <div class="pick-body">
+                <h3>短池游泳世界杯 女子 200 米自由泳</h3>
+                <div class="tags"><span class="tag b">游泳</span><span class="tag">短池世界杯</span><span class="tag g">可回看</span></div>
+                <p class="look">短池转身次数多，25 米池的蹬壁效率直接拉开差距。这场决赛有两位选手游进 1 分 53 秒，值得逐段回看转身细节。</p>
+                <div class="meta"><span>16:30 开赛</span><span>评分 8.7</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-tianjing60/400/300" width="400" height="300" loading="lazy" alt="室内田径大奖赛男子60米决赛起跑">
+              <div class="pick-body">
+                <h3>室内田径大奖赛 男子 60 米决赛</h3>
+                <div class="tags"><span class="tag b">田径</span><span class="tag">室内赛</span><span class="tag">短距离</span></div>
+                <p class="look">60 米全程不到 7 秒，起跑反应时占比极高。本场八名选手中有三人本赛季跑进 6 秒 60，出发枪响后即可判断名次。</p>
+                <div class="meta"><span>11 月 6 日 20:10</span><span>热度 71</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-paiqiu/400/300" width="400" height="300" loading="lazy" alt="女排联赛网前拦网瞬间">
+              <div class="pick-body">
+                <h3>女排联赛第 6 轮 天津 vs 江苏</h3>
+                <div class="tags"><span class="tag b">排球</span><span class="tag">女排联赛</span><span class="tag">强强对话</span></div>
+                <p class="look">两支全华班阵容的对决，天津主打高点强攻，江苏依靠快速多变。五局大战概率高，适合整场看完。</p>
+                <div class="meta"><span>11 月 7 日 19:30</span><span>评分 8.9</span></div>
+              </div>
+            </article>
+
+            <article class="pick">
+              <img src="https://picsum.photos/seed/cctv5-bingxue/400/300" width="400" height="300" loading="lazy" alt="短道速滑世界杯男子1000米弯道">
+              <div class="pick-body">
+                <h3>短道速滑世界杯 男子 1000 米</h3>
+                <div class="tags"><span class="tag b">冰雪</span><span class="tag">短道速滑</span><span class="tag gold">决赛轮</span></div>
+                <p class="look">1000 米共九圈，中段位置争夺最激烈。本场有两人曾在世界杯分站登台，最后一圈外道超越是主要看点。</p>
+                <div class="meta"><span>11 月 5 日 21:20</span><span>热度 76</span></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- 3 最新动态 -->
+        <section class="sec" id="feed" aria-labelledby="t-feed">
+          <div class="sec-head">
+            <h2 id="t-feed">最新更新与今日赛程动态</h2>
+            <span class="sec-note">截至 11 月 8 日 18:40</span>
+          </div>
+          <div class="card pad">
+            <ul class="feed">
+              <li>
+                <time>今天 18:40</time>
+                <div><div class="ft"><a href="/#picks">男篮常规赛第 9 轮 广东 vs 浙江</a></div><div class="fs">赛前名单公布，广东后卫线轮换缩减至三人，浙江双外援均进入首发。</div></div>
+                <span class="fb live">直播中</span>
+              </li>
+              <li>
+                <time>今天 17:55</time>
+                <div><div class="ft"><a href="/#picks">乒乓球全锦赛 男单半决赛</a></div><div class="fs">第二场半决赛结束，决胜局 11:9，比赛用时 58 分钟，回看已上线。</div></div>
+                <span class="fb new">回看新增</span>
+              </li>
+              <li>
+                <time>今天 16:10</time>
+                <div><div class="ft"><a href="/#picks">短池游泳世界杯 女子 200 米自由泳</a></div><div class="fs">决赛成绩公布，冠军游出 1 分 52 秒 84，转身分段数据同步更新。</div></div>
+                <span class="fb">成绩更新</span>
+              </li>
+              <li>
+                <time>今天 14:20</time>
+                <div><div class="ft"><a href="/#picks">羽毛球大师赛 男双决赛</a></div><div class="fs">决赛开赛时间由 20:30 调整至 21:00，转播时段相应顺延。</div></div>
+                <span class="fb">时间调整</span>
+              </li>
+              <li>
+                <time>今天 12:05</time>
+                <div><div class="ft"><a href="/#news">中超第 29 轮转播计划</a></div><div class="fs">两场争冠相关比赛分别安排在 11 月 9 日与 11 月 10 日晚间，解说阵容已确定。</div></div>
+                <span class="fb">排期公布</span>
+              </li>
+              <li>
+                <time>今天 10:30</time>
+                <div><div class="ft"><a href="/#picks">女排联赛第 6 轮 天津 vs 江苏</a></div><div class="fs">全场回看上线，五局比分 25:22、23:25、25:19、22:25、15:12。</div></div>
+                <span class="fb new">回看新增</span>
+              </li>
+              <li>
+                <time>昨天 21:40</time>
+                <div><div class="ft"><a href="/#picks">短道速滑世界杯 男子 1000 米</a></div><div class="fs">决赛录像与犯规判罚说明同步发布，裁判回看片段约 3 分钟。</div></div>
+                <span class="fb">判罚说明</span>
+              </li>
+              <li>
+                <time>昨天 19:15</time>
+                <div><div class="ft"><a href="/#picks">室内田径大奖赛 男子 60 米决赛</a></div><div class="fs">起跑反应时数据公布，冠军 0.128 秒为全场最快。</div></div>
+                <span class="fb">数据更新</span>
+              </li>
+              <li>
+                <time>11 月 6 日 15:00</time>
+                <div><div class="ft"><a href="/#cats">乒乓球全锦赛赛程调整</a></div><div class="fs">混双决赛提前至 11 月 9 日下午，与男单决赛不再同日。</div></div>
+                <span class="fb">赛程调整</span>
+              </li>
+              <li>
+                <time>11 月 5 日 11:20</time>
+                <div><div class="ft"><a href="/#deep">足协杯半决赛次回合开球时间</a></div><div class="fs">两场比赛统一改为 19:35 开球，转播时长增加赛前 15 分钟分析。</div></div>
+                <span class="fb">排期公布</span>
+              </li>
+              <li>
+                <time>11 月 3 日 09:50</time>
+                <div><div class="ft"><a href="/#news">短池游泳世界杯参赛名单</a></div><div class="fs">新增两名选手报名女子 100 米蝶泳，预赛分组已重新编排。</div></div>
+                <span class="fb">名单更新</span>
+              </li>
+              <li>
+                <time>10 月 30 日 20:00</time>
+                <div><div class="ft"><a href="/#feed">11 月转播日历上线</a></div><div class="fs">覆盖篮球、足球、乒乓球、羽毛球、游泳、田径六个项目的整月排期。</div></div>
+                <span class="fb">日历上线</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 4 分类入口 -->
+        <section class="sec" id="cats" aria-labelledby="t-cats">
+          <div class="sec-head">
+            <h2 id="t-cats">按项目分类找比赛</h2>
+            <span class="sec-note">8 个项目频道</span>
+          </div>
+          <div class="cat-grid">
+            <a class="cat" href="/#picks"><b>篮球</b><span>男篮常规赛、全明星周末、女篮联赛</span><em>4 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>足球</b><span>中超、足协杯、国家队热身赛</span><em>6 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>乒乓球</b><span>全锦赛、乒超联赛、世界杯分站</span><em>5 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>羽毛球</b><span>大师赛、全英公开赛、汤尤杯</span><em>3 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>田径</b><span>室内大奖赛、马拉松、钻石联赛</span><em>2 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>游泳</b><span>短池世界杯、冠军赛、花样游泳</span><em>3 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>排球</b><span>女排联赛、男排联赛、世联赛</span><em>2 场在播 →</em></a>
+            <a class="cat" href="/#picks"><b>冰雪项目</b><span>短道速滑世界杯、花样滑冰大奖赛</span><em>2 场在播 →</em></a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section class="sec" id="deep" aria-labelledby="t-deep">
+          <div class="sec-head">
+            <h2 id="t-deep">转播解析：不同项目的观看差别在哪</h2>
+            <span class="sec-note">约 800 字</span>
+          </div>
+          <div class="deep">
+            <p>同样是在 cctv5直播里看一场比赛，篮球、乒乓球和游泳的观看方式其实完全不同。差别不在画面质量，而在赛制结构、时间密度和判断胜负的信息量。搞清楚这些差别，才知道一场比赛该从哪一段开始看、哪些时段可以跳过。</p>
+
+            <h3>联赛制项目：看第四节的阵容变化</h3>
+            <p>男篮常规赛和女排联赛都属于长周期联赛，单场胜负对总排名影响有限，但单场内部的节奏变化很大。以男篮为例，前三节往往是试探与轮换，真正的分水岭出现在第四节开始后 3 到 5 分钟：领先方是否收缩轮换、落后方是否启用全场紧逼，这两件事决定比赛走向。</p>
+            <p>如果时间有限，直接从第三节最后 2 分钟开始看，能覆盖大部分战术调整。联赛的另一个特点是背靠背比赛多，同一支球队两天内打两场时，第二场的体能分配会明显不同，主力出场时间通常压缩 5 到 8 分钟。</p>
+
+            <h3>单项锦标赛：淘汰赛阶段才值得整场看</h3>
+            <p>乒乓球全锦赛、羽毛球大师赛这类单项赛事，赛程呈现明显的漏斗结构。前两轮对手实力差距大，单场时长可能只有 25 分钟；进入八强后，每场都可能打满决胜局。判断标准很简单：看对阵表里双方是否都在国内排名前十六，是则整场看，否则看集锦即可。</p>
+            <div class="callout">
+              <p><strong>一个实用判断：</strong>乒乓球七局四胜制下，如果前两局比分都超过 11:9，说明双方接发球质量接近，这场大概率打满六局以上，值得留出完整时间。</p>
+            </div>
+
+            <h3>计时类项目：胜负在起跑和转身</h3>
+            <p>游泳和田径属于计时项目，没有攻防转换，观看重点集中在技术动作的细节上。短池游泳的 25 米池比标准池多一倍转身次数，每次蹬壁能拉开 0.2 到 0.4 秒，200 米项目里累计差距可能超过 1 秒。看回看时，把播放速度调到 0.5 倍观察蹬壁角度，比看最终成绩更有信息量。</p>
+            <p>室内田径的 60 米项目全程不足 7 秒，起跑反应时占成绩比重接近 15%。转播画面通常会在起跑后给出反应时数据，0.15 秒以内属于优秀，超过 0.20 秒基本退出前三争夺。</p>
+
+            <h3>四类项目的观看参数对照</h3>
+            <table class="cmp">
+              <thead>
+                <tr><th>项目类型</th><th>单场时长</th><th>关键节点</th><th>适合的观看方式</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>篮球联赛</td><td>约 2 小时</td><td>第四节前 5 分钟</td><td>从第三节末段切入，看完整第四节</td></tr>
+                <tr><td>足球联赛</td><td>约 1 小时 55 分</td><td>上下半场各前 15 分钟</td><td>整场看，中场休息可跳过</td></tr>
+                <tr><td>乒乓球单打</td><td>40—70 分钟</td><td>每局 9 平之后</td><td>八强后整场看，前两轮看集锦</td></tr>
+                <tr><td>短池游泳</td><td>单项 2—4 分钟</td><td>转身与最后 25 米</td><td>回看时慢放转身片段</td></tr>
+              </tbody>
+            </table>
+
+            <h3>解说与转播机位也影响判断</h3>
+            <p>不同项目的转播机位数量差别明显。篮球通常有 8 到 12 个机位，能给出底线视角和篮下特写；乒乓球台面机位固定在球台侧后方，主要用于判断旋转；游泳的水下机位只在部分决赛场次启用。解说方面，联赛多采用退役运动员加专业主持的搭配，单项锦标赛则常由项目专项解说独挑，战术解释密度更高。</p>
+            <p>对观众来说，机位和解说的差异会直接影响对比赛的理解程度。想看清战术，优先选有多机位回看的场次；只想了解结果，看赛后集锦就够了。这也是同样的项目、不同场次观看价值差异很大的原因。</p>
+          </div>
+        </section>
+
+        <!-- 6 体验指南 -->
+        <section class="sec" id="guide" aria-labelledby="t-guide">
+          <div class="sec-head">
+            <h2 id="t-guide">观看顺序：第一次挑场次怎么选</h2>
+            <span class="sec-note">5 步判断法</span>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <h4>先按项目定大方向</h4>
+              <p>喜欢攻防对抗选篮球和足球，喜欢技术细节选乒乓球和羽毛球，喜欢短时高强度选游泳和田径。项目定了，可选的场次会立刻收窄到三到五场。</p>
+            </div>
+            <div class="step">
+              <h4>再看是否处于淘汰赛或争冠关键轮</h4>
+              <p>联赛看积分榜位置，前两名对话或保级区对话都值得看；单项赛事看是否进入八强之后。常规轮次中实力悬殊的对阵，观看价值明显偏低。</p>
+            </div>
+            <div class="step">
+              <h4>核对开赛时间与时长</h4>
+              <p>晚间 19:35 开赛的联赛通常 22:00 前结束；羽毛球决赛日可能延续到 23:00。时间不够时，优先选单项时长在 1 小时内的比赛。</p>
+            </div>
+            <div class="step">
+              <h4>比较两场同类比赛的看点密度</h4>
+              <p>同样是男篮，一场是双外援对全华班，另一场是两支季后赛球队交手，后者的战术变化更多。看赛前名单和近期战绩就能区分。</p>
+            </div>
+            <div class="step">
+              <h4>决定看直播还是回看</h4>
+              <p>直播适合节奏快、悬念强的场次；回看适合技术类项目，可以慢放和反复看关键片段。已经知道结果的比赛，回看时直接跳到决胜局或最后一节即可。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7 FAQ -->
+        <section class="sec faq" id="faq" aria-labelledby="t-faq">
+          <div class="sec-head">
+            <h2 id="t-faq">关于赛事转播的常见问题</h2>
+            <span class="sec-note">6 个问答</span>
+          </div>
+
+          <details>
+            <summary>乒乓球全锦赛一般多久打完一轮？</summary>
+            <div class="ans"><p>单打前两轮通常一天内完成，每场 30 到 50 分钟；进入八强后每天只打一轮，每场可能超过 1 小时。整项赛事从开赛到决赛一般 6 到 8 天，混双和单打决赛通常分开安排在两到三天内。</p></div>
+          </details>
+
+          <details>
+            <summary>男篮常规赛和季后赛的转播节奏有什么区别？</summary>
+            <div class="ans"><p>常规赛一周三到四场，集中在晚间 19:35，单场约 2 小时；季后赛改为系列赛制，同一对阵连续进行，间隔一到两天，转播时段更固定，赛前分析节目时长也会增加 15 分钟左右。</p></div>
+          </details>
+
+          <details>
+            <summary>短池游泳和标准池的成绩为什么不能直接比较？</summary>
+            <div class="ans"><p>短池 25 米池转身次数是标准池的两倍，每次蹬壁都能获得额外推进，因此同项目短池成绩普遍快 1 到 2 秒。两个池型的纪录分开计算，不能混在一起排名。</p></div>
+          </details>
+
+          <details>
+            <summary>羽毛球大师赛和全英公开赛级别一样吗？</summary>
+            <div class="ans"><p>不一样。全英公开赛属于最高级别的超级 1000 赛事，积分和奖金更高；大师赛多为超级 500 或超级 750 级别，参赛阵容略弱，但决赛日对抗强度依然很高。</p></div>
+          </details>
+
+          <details>
+            <summary>第一次看田径比赛，从哪个项目入手比较好？</summary>
+            <div class="ans"><p>建议从男子 60 米或 100 米开始。全程时间短、规则简单，起跑反应时和分段速度都有数据可对照，几分钟内就能判断谁更强。熟悉之后再去看中长跑和接力。</p></div>
+          </details>
+
+          <details>
+            <summary>足球比赛的加时和点球大战转播会延长多久？</summary>
+            <div class="ans"><p>淘汰赛打平后进入 30 分钟加时，加时仍平则点球大战。整体转播时间会比常规场次延长 45 到 60 分钟，排观看计划时要预留这段时间。</p></div>
+          </details>
+        </section>
+
+        <!-- 8 用户评论 -->
+        <section class="sec" id="cmts" aria-labelledby="t-cmts">
+          <div class="sec-head">
+            <h2 id="t-cmts">观众在聊什么</h2>
+            <span class="sec-note">14 条 · 11 月 8 日</span>
+          </div>
+          <div class="cmts">
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f5aa0">老</span><b>老陈看球</b><time>今天 18:52</time></div><p>广东这场后卫线只剩三人轮换，第四节体能肯定吃紧。浙江双外援都在，<span class="on">看好客场赢 5 分以内</span>。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#d94f2b">台</span><b>台球小周</b><time>今天 18:31</time></div><p>乒乓球男单半决赛那场决胜局 11:9 太紧了，两个直板对拉中远台，回看值得再刷一遍。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f7a5a">泳</span><b>泳池边的猫</b><time>今天 17:10</time></div><p>短池 200 自那个 1 分 52 秒 84 的转身分段确实漂亮，第三次转身拉开了差不多 0.3 秒。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#c8912a">羽</span><b>羽毛球场老李</b><time>今天 16:44</time></div><p>男双决赛改到 21:00 有点晚，第二天还要上班。不过两对组合都是平抽快挡，第一局应该很快。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#5b4b8a">跑</span><b>跑道上的风</b><time>今天 15:20</time></div><p>60 米决赛冠军反应时 0.128 秒，这个数据放室内赛季里算很快了，起跑就赢了一半。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f5aa0">排</span><b>排球二传手</b><time>今天 13:05</time></div><p>天津对江苏打了五局，江苏第三局换二传之后节奏明显变快，这个调整挺关键。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#d94f2b">冰</span><b>冰刀不冷</b><time>今天 11:38</time></div><p>短道 1000 米最后那个外道超越有点争议，判罚说明里给了回看角度，看完能理解裁判。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f7a5a">足</span><b>看台第七排</b><time>今天 10:12</time></div><p>中超第 29 轮这场基本决定冠军归属了，海港边路传中质量一直不稳，蓉城的反击更有威胁。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#c8912a">篮</span><b>三分线外</b><time>昨天 22:40</time></div><p>常规赛前八轮看下来，今年各队外援使用率普遍下降，本土后卫的组织任务重了不少。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#5b4b8a">乒</span><b>球台一角</b><time>昨天 21:16</time></div><p>全锦赛混双决赛提前到 9 号下午挺好的，不用跟男单决赛挤在同一天，两场都能看完。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f5aa0">田</span><b>田径场边</b><time>昨天 19:50</time></div><p>室内 60 米项目确实短，一眨眼就结束了。还是更习惯看 400 米，战术分配更明显。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#d94f2b">游</span><b>自由泳阿凯</b><time>11 月 7 日 20:33</time></div><p>短池转身真的要慢放看，正常速度根本看不清蹬壁角度，回看功能这点很实用。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#1f7a5a">羽</span><b>网前小球</b><time>11 月 6 日 18:22</time></div><p>大师赛级别比全英低一些，但决赛日强度不差。倒是前两轮对手差距太大，看集锦就够了。</p></div>
+
+            <div class="cmt"><div class="cmt-top"><span class="av" style="background:#c8912a">排</span><b>发球轮</b><time>11 月 5 日 21:08</time></div><p>女排联赛今年全华班对抗多了，比赛节奏比往年快，五局大战的比例也高了不少。</p></div>
+
+          </div>
+        </section>
+
+        <!-- 9 相关资讯 -->
+        <section class="sec" id="news" aria-labelledby="t-news">
+          <div class="sec-head">
+            <h2 id="t-news">赛事资讯与排期变化</h2>
+            <span class="sec-note">6 条 · 10 月 30 日至 11 月 8 日</span>
+          </div>
+          <div class="news">
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-zhongchao/600/400" width="600" height="400" loading="lazy" alt="中超第29轮转播排期新闻配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 8 日</span><span>·</span><span>足球</span></div>
+                <h3><a href="/#picks">中超第 29 轮两场争冠战排期确定</a></h3>
+                <p>上海海港对成都蓉城、山东泰山对北京国安分别安排在 11 月 9 日与 10 日晚间，解说阵容为退役球员加专业主持组合。</p>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-pingpang/600/400" width="600" height="400" loading="lazy" alt="乒乓球全锦赛混双决赛调整公告配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 6 日</span><span>·</span><span>乒乓球</span></div>
+                <h3><a href="/#feed">乒乓球全锦赛混双决赛提前至 11 月 9 日下午</a></h3>
+                <p>原定与男单决赛同日进行的混双决赛调整到下午场，男单决赛仍保留在晚间时段，两场转播不再重叠。</p>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-youyong/600/400" width="600" height="400" loading="lazy" alt="短池游泳世界杯参赛名单更新配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 3 日</span><span>·</span><span>游泳</span></div>
+                <h3><a href="/#picks">短池游泳世界杯新增两名女子蝶泳选手报名</a></h3>
+                <p>女子 100 米蝶泳预赛分组重新编排，新增选手本赛季最好成绩均在 57 秒以内，预赛竞争强度上升。</p>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-yumao/600/400" width="600" height="400" loading="lazy" alt="羽毛球大师赛决赛日时间调整配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 8 日</span><span>·</span><span>羽毛球</span></div>
+                <h3><a href="/#picks">羽毛球大师赛男双决赛开赛时间调整至 21:00</a></h3>
+                <p>受前序场次时长影响，决赛时段整体顺延 30 分钟，转播计划与赛后采访环节相应调整。</p>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-tianjing/600/400" width="600" height="400" loading="lazy" alt="室内田径大奖赛起跑反应时数据配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 7 日</span><span>·</span><span>田径</span></div>
+                <h3><a href="/#picks">室内田径大奖赛 60 米决赛起跑数据公布</a></h3>
+                <p>冠军起跑反应时 0.128 秒为全场最快，八名选手中五人反应时在 0.15 秒以内，整体出发质量高于上一站。</p>
+              </div>
+            </article>
+
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/cctv5-news-bingxue/600/400" width="600" height="400" loading="lazy" alt="短道速滑世界杯判罚说明配图">
+              <div class="nb">
+                <div class="nd"><span>11 月 7 日</span><span>·</span><span>冰雪</span></div>
+                <h3><a href="/#picks">短道速滑 1000 米决赛判罚说明公开</a></h3>
+                <p>裁判组公布最后两圈的身体接触回看角度，认定外道超越过程中存在横向移动，最终名次维持原判。</p>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- 10 相关推荐 -->
+        <section class="sec" id="reco" aria-labelledby="t-reco">
+          <div class="sec-head">
+            <h2 id="t-reco">延伸方向与具体条目</h2>
+            <span class="sec-note">8 个方向</span>
+          </div>
+          <div class="reco">
+            <a href="/#picks"><b>男篮</b> 常规赛第四节战术</a>
+            <a href="/#deep">短池游泳转身效率对比</a>
+            <a href="/#picks"><b>乒乓球</b> 七局四胜制节奏</a>
+            <a href="/#guide">单项锦标赛淘汰赛观看顺序</a>
+            <a href="/#picks"><b>羽毛球</b> 大师赛与全英级别差异</a>
+            <a href="/#deep">室内田径 60 米起跑数据</a>
+            <a href="/#picks"><b>女排联赛</b> 全华班对抗特点</a>
+            <a href="/#faq">足球淘汰赛加时与点球时长</a>
+          </div>
+        </section>
+
+        <!-- 11 榜单 -->
+        <section class="sec" id="rank" aria-labelledby="t-rank">
+          <div class="sec-head">
+            <h2 id="t-rank">本周观看热度榜</h2>
+            <span class="sec-note">11 月 2 日至 11 月 8 日</span>
+          </div>
+          <div class="card pad">
+            <ol class="rank">
+              <li><div><span class="rt">男篮常规赛第 9 轮 广东 vs 浙江</span><span class="rs">CBA 常规赛 · 11 月 8 日 19:35</span></div><span class="rv">96</span></li>
+              <li><div><span class="rt">中超第 29 轮 上海海港 vs 成都蓉城</span><span class="rs">中超联赛 · 11 月 9 日 19:35</span></div><span class="rv">94</span></li>
+              <li><div><span class="rt">乒乓球全锦赛 男单半决赛</span><span class="rs">全国锦标赛 · 11 月 8 日 14:00</span></div><span class="rv">91</span></li>
+              <li><div><span class="rt">女排联赛第 6 轮 天津 vs 江苏</span><span class="rs">女排联赛 · 11 月 7 日 19:30</span></div><span class="rv">89</span></li>
+              <li><div><span class="rt">羽毛球大师赛 男双决赛</span><span class="rs">大师赛 · 11 月 8 日 21:00</span></div><span class="rv">88</span></li>
+              <li><div><span class="rt">短池游泳世界杯 女子 200 米自由泳</span><span class="rs">短池世界杯 · 11 月 8 日 16:30</span></div><span class="rv">87</span></li>
+              <li><div><span class="rt">短道速滑世界杯 男子 1000 米</span><span class="rs">世界杯分站 · 11 月 5 日 21:20</span></div><span class="rv">76</span></li>
+              <li><div><span class="rt">室内田径大奖赛 男子 60 米决赛</span><span class="rs">室内大奖赛 · 11 月 6 日 20:10</span></div><span class="rv">71</span></li>
+            </ol>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 右：辅助栏 -->
+      <aside class="aside" aria-label="辅助信息">
+
+        <div class="as-card">
+          <div class="as-head">今日转播时间线 <span>11 月 8 日</span></div>
+          <div class="as-body">
+            <ul class="tl">
+              <li><time>14:00</time><b>乒乓球全锦赛 男单半决赛</b><span>已结束 · 回看上线</span></li>
+              <li><time>16:30</time><b>短池游泳世界杯 女子 200 自</b><span>已结束 · 成绩更新</span></li>
+              <li class="now"><time>19:35</time><b>男篮常规赛第 9 轮</b><span>直播中 · 广东 vs 浙江</span></li>
+              <li><time>21:00</time><b>羽毛球大师赛 男双决赛</b><span>待开播 · 时间顺延</span></li>
+              <li><time>22:40</time><b>赛后集锦与采访</b><span>预计时长 25 分钟</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="as-card">
+          <div class="as-head">重点项目入口</div>
+          <div class="as-body">
+            <ul class="as-links">
+              <li><a href="/#picks">男篮常规赛 <i>4 场</i></a></li>
+              <li><a href="/#picks">中超与足协杯 <i>6 场</i></a></li>
+              <li><a href="/#picks">乒乓球全锦赛 <i>5 场</i></a></li>
+              <li><a href="/#picks">羽毛球大师赛 <i>3 场</i></a></li>
+              <li><a href="/#picks">短池游泳世界杯 <i>3 场</i></a></li>
+              <li><a href="/#picks">室内田径大奖赛 <i>2 场</i></a></li>
+              <li><a href="/#picks">女排联赛 <i>2 场</i></a></li>
+              <li><a href="/#picks">短道速滑世界杯 <i>2 场</i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="as-card">
+          <div class="as-head">回看新增 <span>12 场</span></div>
+          <div class="as-body">
+            <ul class="as-links">
+              <li><a href="/#feed">乒乓球男单半决赛 第二场 <i>今天 17:55</i></a></li>
+              <li><a href="/#feed">女排联赛第 6 轮 全场 <i>今天 10:30</i></a></li>
+              <li><a href="/#feed">短道速滑 1000 米决赛 <i>昨天 21:40</i></a></li>
+              <li><a href="/#feed">室内田径 60 米决赛 <i>昨天 19:15</i></a></li>
+              <li><a href="/#feed">短池游泳 200 自决赛 <i>今天 16:10</i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div>
+      <div class="fbrand">
+        <svg width="30" height="30" viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1f5aa0"/>
+          <path d="M13 33h9l5-13 9 27 5-15h10" fill="none" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <b>cctv5直播</b>
+      </div>
+      <p>按日期与开赛时间汇总央视体育频道的赛事转播安排，覆盖篮球、足球、乒乓球、羽毛球、田径、游泳、排球与冰雪项目，提供回看片段与项目观看判断依据。</p>
+    </div>
+    <div>
+      <h4>项目频道</h4>
+      <ul>
+        <li><a href="/#cats">篮球 · 男篮常规赛</a></li>
+        <li><a href="/#cats">足球 · 中超与足协杯</a></li>
+        <li><a href="/#cats">乒乓球 · 全锦赛</a></li>
+        <li><a href="/#cats">羽毛球 · 大师赛</a></li>
+        <li><a href="/#cats">游泳 · 短池世界杯</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>观看参考</h4>
+      <ul>
+        <li><a href="/#picks">赛事精选</a></li>
+        <li><a href="/#feed">今日动态</a></li>
+        <li><a href="/#deep">转播解析</a></li>
+        <li><a href="/#guide">观看顺序</a></li>
+        <li><a href="/#rank">本周热度榜</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>问答与延伸</h4>
+      <ul>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#cmts">观众评论</a></li>
+        <li><a href="/#news">赛事资讯</a></li>
+        <li><a href="/#reco">延伸方向</a></li>
+        <li><a href="/#overview">频道概览</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 cctv5直播 · 体育赛事转播指南</span>
+    <span class="demo">部分内容为示例数据，仅用于展示页面结构</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var box = document.getElementById('searchRes');
+  if(!form || !input || !box) return;
+
+  var sections = Array.prototype.slice.call(
+    document.querySelectorAll('main .sec, main .pick, main .cmt, main .news-item, main .cat, main .step')
+  );
+
+  function clearMarks(){
+    document.querySelectorAll('.is-dim').forEach(function(el){ el.classList.remove('is-dim'); });
+    document.querySelectorAll('.is-hit').forEach(function(el){ el.classList.remove('is-hit'); });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var kw = input.value.trim();
+    clearMarks();
+    if(!kw){
+      box.classList.remove('show');
+      box.innerHTML = '';
+      return;
+    }
+    var k = kw.toLowerCase();
+    var blocks = Array.prototype.slice.call(document.querySelectorAll('main .sec'));
+    var hits = [];
+    blocks.forEach(function(sec){
+      var text = sec.textContent.toLowerCase();
+      if(text.indexOf(k) !== -1){
+        hits.push(sec);
+        sec.classList.add('is-hit');
+      } else {
+        sec.classList.add('is-dim');
+      }
+    });
+    if(hits.length === 0){
+      box.classList.add('show');
+      box.innerHTML = '没有找到与「<b>' + kw.replace(/[<>&]/g,'') + '</b>」相关的赛事或项目条目。可以试试“男篮”“乒乓球”“短池游泳”这类具体项目名。';
+      return;
+    }
+    box.classList.add('show');
+    box.innerHTML = '找到 <b>' + hits.length + '</b> 个相关板块，已高亮显示。首个结果：<b>' +
+      (hits[0].querySelector('h2') ? hits[0].querySelector('h2').textContent : '相关内容') + '</b>';
+    hits[0].scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  input.addEventListener('input', function(){
+    if(input.value.trim() === ''){
+      clearMarks();
+      box.classList.remove('show');
+      box.innerHTML = '';
+    }
+  });
+})();
+</script>
+</body>
+  </html>
